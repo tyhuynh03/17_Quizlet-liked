@@ -28,14 +28,18 @@ def question_detail(request, question_id):
 def add_question(request):
     topics = Topic.objects.all()
     if request.method == 'POST':
+        # Lấy dữ liệu từ form
         question_form = QuestionForm(request.POST)
         choice_formset = ChoiceFormSet(request.POST)
         form = TopicForm(request.POST)
+
+        # Xác nhận form có hợp lệ không
         if form.is_valid():
             topic = form.save(commit=False)
             topic.user = request.user  # Gán người tạo chủ đề
             topic.save()
 
+        # Kiểm tra tính hợp lệ của form câu hỏi và formset đáp án
         if question_form.is_valid() and choice_formset.is_valid():
             topic_id = request.POST.get('topic_id')
             if topic_id:
@@ -43,19 +47,37 @@ def add_question(request):
             else:
                 new_topic_name = request.POST.get('new_topic')
                 topic, created = Topic.objects.get_or_create(name=new_topic_name, user=request.user)  # Gán người tạo chủ đề khi tạo mới
+
+            # Lưu câu hỏi và gán topic cho câu hỏi
             question = question_form.save(commit=False)
             question.topic = topic
+
+            # Xử lý ảnh và audio được tải lên từ form
+            image_file = request.FILES.get('image')
+            audio_file = request.FILES.get('audio')
+
+            # Kiểm tra và lưu ảnh và audio nếu tồn tại
+            if image_file:
+                question.image = image_file
+
+            if audio_file:
+                question.audio = audio_file
+
             question.save()
+
+            # Lưu các đáp án liên quan
             choice_formset.instance = question
             choice_formset.save()
-            return redirect('my_page')  
+
+            return redirect('my_page')  # Chuyển hướng sau khi lưu thành công
     else:
+        # Xử lý khi method không phải POST
         user = request.user
         question_form = QuestionForm()
         choice_formset = ChoiceFormSet()
         form = TopicForm()
-        # chỉ lấy chủ đề mà người dùng tạo
-        topics = Topic.objects.filter(user=user)
+        topics = Topic.objects.filter(user=user)  # chỉ lấy chủ đề mà người dùng tạo
+
     return render(request, 'add_question.html', {'question_form': question_form, 'choice_formset': choice_formset, 'topics': topics,'form': form})
 
 
