@@ -7,27 +7,27 @@
 Mục đích của tài liệu này nhằm mô tả một cách đầy đủ và toàn diện yêu cầu của ứng dụng: các yêu cầu chức năng, yêu cầu phi chức năng, các ràng buộc về mặt thiết kế.
 
 * Yêu Cầu Chức Năng (Functional Requirements):
- - Quản lý Người Dùng:
+  - Quản lý Người Dùng:
     + Chức năng đăng nhập và đăng ký.
     + Khả năng tạo, chỉnh sửa và xóa người dùng (chỉ dành cho admin).
     + Quản lý vai trò của người dùng (admin hoặc user).
- - Quản Lý Chủ Đề:
+  - Quản Lý Chủ Đề:
     + Tạo, chỉnh sửa và xóa chủ đề câu hỏi.
     + Liệt kê danh sách chủ đề câu hỏi.
- - Quản Lý Câu Hỏi:
+  - Quản Lý Câu Hỏi:
     + Tạo, chỉnh sửa và xóa câu hỏi trong từng chủ đề.
     + Hiển thị danh sách câu hỏi trong mỗi chủ đề.
- - Trả Lời Câu Hỏi:
+  - Trả Lời Câu Hỏi:
     + Người dùng có thể trả lời các câu hỏi có sẵn trong hệ thống.
     + Tính điểm và hiển thị kết quả sau khi trả lời câu hỏi.
 * Yêu Cầu Phi Chức Năng (Non-functional Requirements):
- - Giao Diện Người Dùng:
+  - Giao Diện Người Dùng:
     + Giao diện thân thiện, dễ sử dụng.
     + Tốc độ tải trang nhanh chóng.
- - Bảo Mật:
+  - Bảo Mật:
     + Hệ thống phải đảm bảo an toàn thông tin người dùng và dữ liệu câu hỏi.
 * Ràng Buộc Thiết Kế (Design Constraints):
- - Công Nghệ:
+  - Công Nghệ:
     + Sử dụng Django framework cho backend và HTML, CSS, JavaScript cho frontend.
     + Sử dụng cơ sở dữ liệu quan hệ MySQL
 
