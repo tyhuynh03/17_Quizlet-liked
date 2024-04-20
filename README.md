@@ -17,9 +17,9 @@ Hướng dẫn cài đặt và chạy sau khi pull project từ github về (Lư
 - 2. Pull Project từ GitHub: Đầu tiên, hãy sử dụng Git để pull project từ GitHub về máy tính của bạn. Bạn có thể sử dụng lệnh sau trong terminal hoặc command prompt:
       git clone https://github.com/tyhuynh03/17_Quizlet-liked/
 - 3. Chạy Docker Compose:
-     Điều hướng đến thư mục gốc của project đã clone.
-     Chạy lệnh sau để tạo và chạy Docker containers từ file docker-compose.yml:
-     docker-compose up --build
+     - Điều hướng đến thư mục gốc của project đã clone.
+     - Chạy lệnh sau để tạo và chạy Docker containers từ file docker-compose.yml:
+     - docker-compose up --build
 Sau khi các containers được khởi động, ứng dụng web sẽ được chạy trên địa chỉ http://localhost:8000/.
 ## THÔNG TIN THÀNH VIÊN
 
