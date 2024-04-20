@@ -20,7 +20,7 @@ Hướng dẫn cài đặt và chạy sau khi pull project từ github về (Lư
      - Điều hướng đến thư mục gốc của project đã clone.
      - Chạy lệnh sau để tạo và chạy Docker containers từ file docker-compose.yml:
      - docker-compose up --build
-Sau khi các containers được khởi động, ứng dụng web sẽ được chạy trên địa chỉ http://localhost:8000/.
+- Sau khi các containers được khởi động, ứng dụng web sẽ được chạy trên địa chỉ http://localhost:8000/.
 ## THÔNG TIN THÀNH VIÊN
 
 - Huỳnh Tấn Tỷ - 21093521
