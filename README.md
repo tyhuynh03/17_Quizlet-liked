@@ -15,10 +15,10 @@ Hướng dẫn cài đặt và chạy sau khi pull project từ github về (Lư
 
 ## THÔNG TIN THÀNH VIÊN
 
-- Họ tên sv 1 - msv
-- Họ tên sv 2 - msv
-- Họ tên sv 3 - msv
-- Họ tên sv 4 - msv
+- Huỳnh Tấn Tỷ - 21093521
+- Hoàng Thanh Tú - 21105251
+- Nguyễn Khắc Luật - 21099741
+- Phạm Nhựt Minh - 21021471
 
 ## TRÁCH NHIỆM
 
