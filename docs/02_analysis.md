@@ -38,9 +38,9 @@ Chỉ ra được tài liệu này dùng cho đối tượng nào?
 
 - Phạm vi: Ứng dụng hướng đến người dùng muốn tự kiểm tra kiến thức hoặc tạo bài kiểm tra để chia sẻ với người khác.
 - Đối Tượng Phục Vụ:
-+ Sinh viên, học sinh muốn ôn tập kiến thức.
-+ Giáo viên muốn tạo bài kiểm tra cho học sinh.
-+ Các chuyên gia muốn chia sẻ kiến thức chuyên môn.
+  + Sinh viên, học sinh muốn ôn tập kiến thức.
+  + Giáo viên muốn tạo bài kiểm tra cho học sinh.
+  + Các chuyên gia muốn chia sẻ kiến thức chuyên môn.
 
 
 ### 2.2 Phân tích yêu cầu
@@ -48,10 +48,10 @@ Chỉ ra được tài liệu này dùng cho đối tượng nào?
 #### 2.2.1 Đặc tả Actors
 
 - Actor 1: Admin
-* Mô tả: Người quản trị hệ thống, có quyền truy cập vào tất cả các chức năng và tính năng của trang web.
+  * Mô tả: Người quản trị hệ thống, có quyền truy cập vào tất cả các chức năng và tính năng của trang web.
 
 - Actor 2: User
-* Mô tả: Người dùng cuối, tham gia vào việc tạo, trả lời câu hỏi và sử dụng các tính năng khác của trang web.
+  * Mô tả: Người dùng cuối, tham gia vào việc tạo, trả lời câu hỏi và sử dụng các tính năng khác của trang web.
 
 
 #### 2.2.2 Đặc tả Use-cases
