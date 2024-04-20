@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400:500;600;700;800;900;&display=swap");
+
+.navbar {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+table {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+table .action-container {
+    display: flex;
+
+}
+
+.action-container a {
+    margin-left: 10px;
+}
+
+form .btn-danger {
+    margin-left: 10px;
+}
+
+tr th:nth-child(5) {
+    text-align: justify;
+}
+
+.alert-error {
+    --bs-alert-color: #58151c;
+    --bs-alert-bg: #f8d7da;
+    --bs-alert-border-color: #f1aeb5;
+    --bs-alert-link-color: #58151c;
+}

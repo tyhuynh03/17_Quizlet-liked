@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Question Detail</title>
+    <style>
+        .correct-answer {
+            color: red;
+            /* Màu đỏ */
+            /* Các thuộc tính CSS khác nếu cần */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Question Detail</h1>
+    <h2>{{ question.text }}</h2>
+    <ul>
+        {% for choice in question.choices.all %}
+        {% if choice.is_correct %}
+        <li class="correct-answer">{{ choice.text }}</li>
+        {% else %}
+        <li>{{ choice.text }}</li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
