@@ -21,6 +21,19 @@ Hướng dẫn cài đặt và chạy sau khi pull project từ github về (Lư
      - Chạy lệnh sau để tạo và chạy Docker containers từ file docker-compose.yml:
      - docker-compose up --build
 - Sau khi các containers được khởi động, ứng dụng web sẽ được chạy trên địa chỉ http://localhost:8000/.
+
+# Hướng dẫn cài đặt và chạy bằng xampp
+- Ngoài cách chạy bằng docker chúng ta có thể dùng xampp
+- 1. Cài đặt xampp: https://www.apachefriends.org/download.html
+- 2. Pull Project từ GitHub: Đầu tiên, hãy sử dụng Git để pull project từ GitHub về máy tính của bạn. Bạn có thể sử dụng lệnh sau trong terminal hoặc command prompt:
+    git clone https://github.com/tyhuynh03/17_Quizlet-liked/
+- 3. Mở xampp, Chọn start Apache và MySql -> Chọn Admin của MySql, chọn 'mới' -> Tạo hệ csdl tên 'django'.
+- 4. Chạy các câu lệnh trên terminal theo thứ tự:
+    pip install -r requirements.txt để cài các thư viện cần dùng
+    python manage.py runscript populate_data_from_csv -> python manage.py runscript import_data 
+    ->python manage.py makemigrations -> python manage.py migrate -> python manage.py runserver
+- Sau khi hoàn tất các bước, web sẽ được chạy trên địa chỉ http://127.0.0.1:8000/.
+
 ## THÔNG TIN THÀNH VIÊN
 
 - Huỳnh Tấn Tỷ - 21093521
