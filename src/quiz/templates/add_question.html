@@ -134,28 +134,31 @@
 
 <body>
     <h1>Add Question</h1>
+    <form method="post" enctype="multipart/form-data">
     <form method="post">
-        {% csrf_token %}
-        <h2>Tên câu hỏi</h2>
-        {{ question_form.as_p }}
-        <h2>Đáp án</h2>
-        {{ choice_formset.as_p }}
-        <label for="topic_id">Select a Topic:</label>
-        <select name="topic_id" id="topic_id">
-            <option value="">-- Choose a Topic --</option>
-            {% for topic in topics %}
-
-            <option value="{{ topic.id }}">{{ topic.name }}</option>
-
-            {% endfor %}
-        </select>
-        <br>
-        <label for="new_topic">Or Add a New Topic:</label>
-        <input type="text" name="new_topic" id="new_topic">
-        <br>
-        <button type="submit">Submit</button>
+      {% csrf_token %}
+      <h2>Tên câu hỏi</h2>
+      {{ question_form.as_p }}
+      <!-- Đây là phần cho phép người dùng tải lên ảnh hoặc audio -->
+      <!-- Đặt input type="file" và các yêu cầu tương ứng ở đây -->
+     
+      <input type="file" name="image" accept="image/*" />
+      <input type="file" name="audio" accept="audio/*" />
+      <h2>Đáp án</h2>
+      {{ choice_formset.as_p }}
+      <label for="topic_id">Select a Topic:</label>
+      <select name="topic_id" id="topic_id">
+        <option value="">-- Choose a Topic --</option>
+        {% for topic in topics %}
+        <option value="{{ topic.id }}">{{ topic.name }}</option>
+        {% endfor %}
+      </select>
+      <br />
+      <label for="new_topic">Or Add a New Topic:</label>
+      <input type="text" name="new_topic" id="new_topic" />
+      <br />
+      <button type="submit">Submit</button>
     </form>
-
-</body>
+  </body>
 
 </html>
