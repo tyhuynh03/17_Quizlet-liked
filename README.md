@@ -1,4 +1,4 @@
-# Tên ứng dụng
+# Ứng dụng tạo câu hỏi trắc nghiệm (Quizlet-liked)
 
 - Mô tả vắn tắt tên ứng dụng ở đây (Gợi ý: ứng dụng giải quyết vấn đề gì, có các đối tượng người dùng như thế nào, có các chức năng gì...)
 
