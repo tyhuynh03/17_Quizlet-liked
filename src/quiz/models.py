@@ -11,6 +11,8 @@ class Topic(models.Model):
 class Question(models.Model):
     text = models.CharField(max_length=255)
     default_topic_id = 1  # ID của chủ đề mặc định đã tồn tại trong cơ sở dữ liệu
+    image = models.ImageField(upload_to='question_images/', blank=True, null=True)  # Trường lưu trữ ảnh
+    audio = models.FileField(upload_to='question_audios/', blank=True, null=True)   # Trường lưu trữ âm thanh
     topic = models.ForeignKey(Topic, related_name='questions', on_delete=models.CASCADE, default=default_topic_id)
 
     def __str__(self):
