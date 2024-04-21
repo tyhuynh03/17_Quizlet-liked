@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Question</title>
+</head>
+
+<body>
+    <h1>Update Question</h1>
+    <form method="POST" action="{% url 'question_update' question_data.id %}" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <label for="text">Question Text:</label><br>
+        <input type="text" id="text" name="text" value="{{ question_data.text }}"><br><br>
+
+        <label for="topic">Topic:</label><br>
+        <input type="number" id="topic" name="topic" value="{{ question_data.topic }}"><br><br>
+
+        <label for="image">Image:</label><br>
+        <input type="file" id="image" name="image"><br><br>
+
+        <label>Choices:</label><br> 
+        {% for choice in question_data.choices %}
+            <input type="text" name="choice{{ choice.id }}" value="{{ choice.text }}"><br>
+            <label for="is_correct{{ choice.id }}">Is Correct:</label>
+            <input type="checkbox" id="is_correct{{ choice.id }}" name="is_correct{{ choice.id }}" {% if choice.is_correct %}checked{% endif %}><br><br>
+        {% endfor %}
+
+
+        <input type="submit" value="Update">
+
+    </form>
+</body>
+
+</html>

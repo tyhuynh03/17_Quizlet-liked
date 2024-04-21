@@ -147,8 +147,8 @@
                 <td>{{question.text}}</td>
                 <td>{{question.topic_name}}</td>
                 <td style="display: flex;" class="action-container">
-                    <a href="#" class="btn btn-secondary">View</a>
-                    <a href="#" class="btn btn-success">Update</a>
+                    <a href="{% url 'question_detail' question.id %}" class="btn btn-secondary">View</a>
+                    <a href="{% url 'question_update' question.id  %}" class="btn btn-success">Update</a>
 
 
                     <form id="deleteForm" action="#" method="POST">

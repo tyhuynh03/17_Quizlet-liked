@@ -183,6 +183,47 @@ class QuestionListView(APIView):
         questions = Question.objects.all()
         serializer = QuestionSerializer(questions, many =True)
         return Response(serializer.data)
+    
+class QuestionDetailView(APIView):
+    def get(self, request, pk):
+        question = Question.objects.filter(id=pk).first()
+        if question is None:
+            return Response({"error": "Question not found"}, status=status.HTTP_404_NOT_FOUND)
+        serializer = QuestionSerializer(question)
+        return Response(serializer.data)
+
+    def put(self, request, pk):
+        question = Question.objects.filter(id=pk).first()
+        if question is None:
+            return Response({"error": "Question not found"}, status=status.HTTP_404_NOT_FOUND)
+        data = request.data
+        
+        serializer = QuestionSerializer(question, data=data)
+        if serializer.is_valid():
+            serializer.save()
+
+            # Cập nhật các lựa chọn của câu hỏi
+            choices_data = request.data.get('choices')
+            
+            if choices_data:
+                for choice_data in choices_data:
+                    choice_id = choice_data.get('id')
+                    choice = Choice.objects.filter(id=choice_id).first()
+                    if choice:
+                        choice.text = choice_data.get('text', choice.text)
+                        choice.is_correct = choice_data.get('is_correct', choice.is_correct)
+                        choice.save()
+                    else:
+                        return Response({"error": f"Choice with id {choice_id} not found"}, status=status.HTTP_404_NOT_FOUND)
+            
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+def question_detail(request, pk):
+    response = QuestionDetailView.as_view()(request, pk=pk)
+    
+    question_data = response.data
+    return render(request, 'question_detail.html', {'question': question_data})
 def question_manage(request):
     response = requests.get(f'http://127.0.0.1:8000/questions')
     questions_data = response.json()
@@ -198,6 +239,49 @@ def question_manage(request):
         topic_name = topic_dict.get(topic_id, 'Unknown')
         question['topic_name'] = topic_name
     return render(request,'question_manage.html',{'questions_data':questions_data})
+import json
+def question_update_view(request,question_id):  
+    if request.method == "GET":
+        response = response = requests.get(f'http://127.0.0.1:8000/question/{question_id}/')
+        if response.status_code == 200:
+            question_data = response.json()
+            return render(request, 'question_update.html', {'question_data': question_data})
+        else:
+            messages.error(request, 'User not found')
+            return redirect('question_manage')
+    elif request.method == 'POST':
+        # Lấy dữ liệu từ form gửi lên
+        updated_data = request.POST
+        print(updated_data)
+        text = request.POST.get('text')
+        topic_id = request.POST.get('topic')
+        image = request.FILES.get('image')
+        choices = []
+        for i in range(1, 4):
+            choice_id = i  # Tạo id cho mỗi lựa chọn
+            choice_text = updated_data.get(f'choice{i}')
+            is_correct = updated_data.get(f'is_correct{i}') == 'on'
+
+            choices.append({'id': choice_id, 'text': choice_text, 'is_correct': is_correct})
+        print(choices)
+        updated_data = {
+            'text': text,
+            'topic': topic_id,
+            'image': image,
+            'choices':choices
+        }
+        
+        
+        # Gửi yêu cầu Restapi để cập nhật thông tin
+        response = requests.put(f'http://127.0.0.1:8000/question/{question_id}/', json=updated_data)
+        if response.status_code == 200:
+            messages.success(request, 'question information updated successfully')
+            return redirect('question_manage')
+        else:
+            # Xử lý trường hợp cập nhật thất bại
+            messages.error(request, 'Failed to update question information')
+            return redirect('question_manage')
+
 # quản lý chủ đề
 
 @user_passes_test(lambda u: u.is_staff)
@@ -283,15 +367,3 @@ class TopicListView(APIView):
         return Response(serializer.data)
 
 #xử lý ảnh
-class QuestionDetailView(APIView):
-    def get(self,request,pk):
-        question = Question.objects.filter(id=pk).first()
-        if question is None:
-            return Response({"error":"Topic not found"},status=status.HTTP_404_NOT_FOUND)
-        serialize = QuestionSerializer(question)
-        return Response(serialize.data)
-def question_detail(request, pk):
-    response = QuestionDetailView.as_view()(request, pk=pk)
-    
-    question_data = response.data
-    return render(request, 'question_detail.html', {'question': question_data})
