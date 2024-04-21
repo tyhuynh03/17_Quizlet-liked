@@ -20,6 +20,8 @@ RUN python manage.py flush --no-input
 RUN python manage.py makemigrations && \
     python manage.py migrate
 
+RUN echo "from users.models import User; User.objects.create_superuser('admin', 'admin@gmail.com', 'admin')" | python manage.py shell
+
 # Sao chép các script Python vào thư mục làm việc trong container
 COPY installation/scripts/ /app/scripts/
 

@@ -12,12 +12,15 @@ from rest_framework.response import Response
 from rest_framework import status
 import requests
 from django.contrib import messages
-from .forms import TopicForm
+from .forms import TopicForm, Topic
 from django.contrib.auth.decorators import login_required, user_passes_test
 
 def question_list(request):
-    questions = Question.objects.all()
-    return render(request, 'question_list.html', {'questions': questions})
+    # Lấy danh sách tất cả các chủ đề và câu hỏi tương ứng
+    topics = Topic.objects.all()
+
+    # Truyền danh sách chủ đề và câu hỏi vào template
+    return render(request, 'question_list.html', {'topics': topics})
 
 # def question_detail(request, question_id):
 #     question = Question.objects.get(id=question_id)
