@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Các câu hỏi của tôi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+        }
+        .question a {
+            color: #333;
+            text-decoration: none;
+        }
+        .topic {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        p {
+            text-align: center;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Các câu hỏi của tôi</h1>
+
+        {% if user_questions %}
+        <ul>
+            {% for question in user_questions %}
+            <li class="question">
+                <div class="topic">Chủ đề: {{ question.topic.name }}</div>
+                <a href="{% url 'question_detail' question.id %}">{{ question.text }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>Không có câu hỏi nào được tìm thấy.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

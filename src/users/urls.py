@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import Register, loginView, LogoutView, UserDetailView, UserListView
-from .views import home,register_view,home_content,login_view,  info_page, HomeAdminView,add_user,DeleteUser,user_detail,user_update_view,DashboardView, MyPageView
+from .views import Register, loginView, LogoutView, UserDetailView, UserListView,DashboardView, MyPageView
+from .views import home,register_view,home_content,login_view,  info_page, HomeAdminView,add_user,DeleteUser,user_detail,user_update_view, my_questions
 
 urlpatterns = [
     path("register/", Register.as_view(), name="register"),
@@ -19,8 +19,8 @@ urlpatterns = [
     path('delete_user/<int:pk>/', DeleteUser.as_view(), name='delete_user'),
     path('update-user/<int:user_id>/', user_update_view, name='user_update'),
     path("dashboard/",DashboardView.as_view(), name= "dashboard"),
-    path("mypage/",MyPageView.as_view(),name = "my_page")
-
+    path("mypage/",MyPageView.as_view(),name = "my_page"),
+    path("my_questions/",my_questions,name = "my_questions")
     
 
 ]

@@ -68,7 +68,7 @@
         <h1>Question List</h1>
         <!-- Duyệt qua từng chủ đề -->
         {% for topic in topics %}
-            <h2>{{ topic.name }}</h2>
+            <h2>Chủ đề: {{ topic.name }}</h2>
             <ul>
                 <!-- Duyệt qua từng câu hỏi của chủ đề -->
                 {% for question in topic.questions.all %}

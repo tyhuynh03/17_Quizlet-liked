@@ -125,6 +125,10 @@ def login_view(request):
 
 def info_page(request):
     return render(request, 'info.html')
+def my_questions(request):
+    # Lấy tất cả các câu hỏi của người dùng đang đăng nhập
+    user_questions = Question.objects.filter(topic__user=request.user)
+    return render(request, 'my_questions.html', {'user_questions': user_questions})
 
 
 
