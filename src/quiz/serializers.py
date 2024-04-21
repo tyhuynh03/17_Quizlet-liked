@@ -9,10 +9,17 @@ class ChoiceSerializer(serializers.ModelSerializer):
         fields = ['id', 'text', 'is_correct']
 class QuestionSerializer(serializers.ModelSerializer):
     choices = ChoiceSerializer(many=True, read_only=True)  # Sử dụng ChoiceSerializer cho field 'choices'
+    
 
     class Meta:
         model = Question
-        fields = ['id', 'text', 'topic', 'choices']
+        fields = ['id', 'text', 'topic', 'choices','image']
+    def get_image(self,question):
+        if 'request' in self.context:
+            if question.image:
+            # Tạo một đường dẫn tới ảnh
+                return self.context['request'].build_absolute_uri(question.image.url)
+        return None
 class TopicSerializer(serializers.ModelSerializer):
     questions = QuestionSerializer(many=True, read_only=True)
     question_count = serializers.SerializerMethodField()  # Định nghĩa trường question_count

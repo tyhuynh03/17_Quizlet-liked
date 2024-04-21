@@ -1,9 +1,11 @@
 from django.urls import path
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('question_list/', views.question_list, name='question_list'),
-    path('question_detail/<int:question_id>/', views.question_detail, name='question_detail'),
+    path('question_detail/<int:pk>/', views.question_detail, name='question_detail'),
     path('import_question_from_csv/', views.import_question_from_csv, name='import_questions_csv'),
     path('add_question/', views.add_question, name='add_question'),
     path('', views.home, name='home'),
@@ -19,4 +21,4 @@ urlpatterns = [
     path("add_topic/",views.add_topic,name="add_topic"),
     path('delete_topic/<int:pk>/', views.DeleteTopic.as_view(), name='delete_topic'),
     path("question_manage/",views.question_manage,name = "question_manage")
-]   
+]   + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

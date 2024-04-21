@@ -15,8 +15,11 @@
 <body>
     <h1>Question Detail</h1>
     <h2>{{ question.text }}</h2>
+    {% if question.image %}
+    <img src="{{ question.image }}" alt="Question Image">
+    {% endif %}
     <ul>
-        {% for choice in question.choices.all %}
+        {% for choice in question.choices %}
         {% if choice.is_correct %}
         <li class="correct-answer">{{ choice.text }}</li>
         {% else %}
@@ -24,6 +27,7 @@
         {% endif %}
         {% endfor %}
     </ul>
+
 </body>
 
 </html>

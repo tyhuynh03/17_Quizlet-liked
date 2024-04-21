@@ -19,9 +19,9 @@ def question_list(request):
     questions = Question.objects.all()
     return render(request, 'question_list.html', {'questions': questions})
 
-def question_detail(request, question_id):
-    question = Question.objects.get(id=question_id)
-    return render(request, 'question_detail.html', {'question': question})
+# def question_detail(request, question_id):
+#     question = Question.objects.get(id=question_id)
+#     return render(request, 'question_detail.html', {'question': question})
 
 # thêm câu hỏi bằng thủ công
 @login_required
@@ -126,6 +126,7 @@ def home(request):
 def start_quiz(request, topic_id):
     topic = Topic.objects.get(pk=topic_id)
     questions = topic.questions.all()  # Truy vấn tất cả các câu hỏi liên quan đến chủ đề
+    
     return render(request, 'quiz.html', {'topic': topic, 'questions': questions})
 
 def add_question_csv(request):
@@ -280,3 +281,17 @@ class TopicListView(APIView):
         topics = Topic.objects.all()
         serializer = TopicSerializer(topics, many = True)
         return Response(serializer.data)
+
+#xử lý ảnh
+class QuestionDetailView(APIView):
+    def get(self,request,pk):
+        question = Question.objects.filter(id=pk).first()
+        if question is None:
+            return Response({"error":"Topic not found"},status=status.HTTP_404_NOT_FOUND)
+        serialize = QuestionSerializer(question)
+        return Response(serialize.data)
+def question_detail(request, pk):
+    response = QuestionDetailView.as_view()(request, pk=pk)
+    
+    question_data = response.data
+    return render(request, 'question_detail.html', {'question': question_data})
