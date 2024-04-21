@@ -22,5 +22,6 @@ urlpatterns = [
     path('delete_topic/<int:pk>/', views.DeleteTopic.as_view(), name='delete_topic'),
     path("question_manage/",views.question_manage,name = "question_manage"),
     path("question/<int:pk>/", views.QuestionDetailView.as_view(), name="questiondetail" ),
-    path("question_update/<int:question_id>/",views.question_update_view,name= "question_update")
+    path("question_update/<int:question_id>/",views.question_update_view,name= "question_update"),
+    path('delete_question/<int:pk>/', views.DeleteQuestion.as_view(), name='delete_question'),
 ]   + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

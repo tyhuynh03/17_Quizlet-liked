@@ -29,9 +29,11 @@
         <div class="question-card" data-question="{{ forloop.counter }}">
             <div class="question">
                 <h2>{{ forloop.counter }}. {{ question.text }}</h2>
+                {% if question.image %}
                 <div class="question-image-container">
-                    <img class="question-image" alt="Ảnh minh họa" src="" />
+                    <img class="question-image-1" alt="Ảnh minh họa" src="/media/{{question.image}}" />
                 </div>
+                {%endif%}
                 <div class="choices">
                     {% for choice in question.choices.all %}
                     <div class="choice" data-question="{{ forloop.parentloop.counter }}"

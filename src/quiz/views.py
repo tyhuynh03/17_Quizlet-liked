@@ -14,6 +14,7 @@ import requests
 from django.contrib import messages
 from .forms import TopicForm, Topic
 from django.contrib.auth.decorators import login_required, user_passes_test
+import json
 
 def question_list(request):
     # Lấy danh sách tất cả các chủ đề và câu hỏi tương ứng
@@ -127,7 +128,10 @@ def home(request):
     return render(request, 'home.html', {'topics': topics})
 @login_required
 def start_quiz(request, topic_id):
+    response = TopicDetailView.as_view()(request,pk = topic_id)
+    topic_data = response.data
     topic = Topic.objects.get(pk=topic_id)
+    
     questions = topic.questions.all()  # Truy vấn tất cả các câu hỏi liên quan đến chủ đề
     
     return render(request, 'quiz.html', {'topic': topic, 'questions': questions})
@@ -242,7 +246,7 @@ def question_manage(request):
         topic_name = topic_dict.get(topic_id, 'Unknown')
         question['topic_name'] = topic_name
     return render(request,'question_manage.html',{'questions_data':questions_data})
-import json
+
 def question_update_view(request,question_id):  
     if request.method == "GET":
         response = response = requests.get(f'http://127.0.0.1:8000/question/{question_id}/')
@@ -284,6 +288,13 @@ def question_update_view(request,question_id):
             # Xử lý trường hợp cập nhật thất bại
             messages.error(request, 'Failed to update question information')
             return redirect('question_manage')
+class DeleteQuestion(APIView):
+    def delete(self, request, pk):
+        question = Question.objects.filter(id=pk).first()
+        if question is None:
+            return Response({"error": "Question not found"}, status=status.HTTP_404_NOT_FOUND)
+        question.delete()
+        return Response({"success": "Question deleted successfully"}, status=status.HTTP_204_NO_CONTENT)
 
 # quản lý chủ đề
 
