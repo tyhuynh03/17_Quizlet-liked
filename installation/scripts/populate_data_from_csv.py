@@ -12,20 +12,26 @@ from quiz.models import Topic, Question, Choice
 
 def run():
     csv_file_path ="./scripts/Toiec.csv"   # Đường dẫn tới file CSV của bạn
-
+    images_folder_path = "./scripts/img/"  # Đường dẫn tới thư mục chứa ảnh
 
     with open(csv_file_path, 'r', encoding='utf-8') as file:
         reader = csv.reader(file)
         for row in reader:
             topic_name = row[0]
             question_text = row[1]
-            choices = row[2:]
+            choices = row[2:10]
+            if len(row) > 10:
+                image_filename = row[-1]
 
             # Kiểm tra xem chủ đề đã tồn tại chưa, nếu không thì tạo mới
             topic, created = Topic.objects.get_or_create(name=topic_name)
 
             # Tạo câu hỏi và liên kết với chủ đề tương ứng
             question = Question.objects.create(text=question_text, topic=topic)
+            # Kiểm tra xem có file ảnh đi kèm không
+            if image_filename:
+                image_path = os.path.join(images_folder_path, image_filename)
+                question.image.save(image_filename, open(image_path, 'rb'))
 
             # Tạo các lựa chọn cho câu hỏi
             for i in range(0, len(choices), 2):
