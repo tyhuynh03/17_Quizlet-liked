@@ -84,11 +84,6 @@ def add_question(request):
 
     return render(request, 'add_question.html', {'question_form': question_form, 'choice_formset': choice_formset, 'topics': topics,'form': form})
 
-
-
-
-
-
 def import_question_from_csv(request):
     if request.method == 'POST' and 'question_file' in request.FILES:
         file = request.FILES['question_file']
@@ -119,7 +114,6 @@ def import_question_from_csv(request):
             return JsonResponse({'error': 'Please upload a CSV file'}, status=400)
     else:
         return JsonResponse({'error': 'Invalid request'}, status=400)
-
 
 def home(request):
     topics = Topic.objects.all()
