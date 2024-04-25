@@ -29,11 +29,13 @@
         <div class="question-card" data-question="{{ forloop.counter }}">
             <div class="question">
                 <h2>{{ forloop.counter }}. {{ question.text }}</h2>
-                {% if question.image %}
                 <div class="question-image-container">
-                    <img class="question-image-1" alt="Ảnh minh họa" src="/media/{{question.image}}" />
+                    {% if question.image %}
+                    <img class="question-image" alt="Ảnh minh họa" src="{{ question.image.url }}" />
+                    {% else %}
+                    <img class="question-image" alt="Ảnh minh họa" src="" />
+                    {% endif %}
                 </div>
-                {%endif%}
                 <div class="choices">
                     {% for choice in question.choices.all %}
                     <div class="choice" data-question="{{ forloop.parentloop.counter }}"
@@ -106,7 +108,10 @@
             }
 
             questions.forEach(function (question) {
-                searchAndSetImage(question);
+                var questionImage = question.querySelector('.question-image');
+                if (!questionImage.src || questionImage.src === window.location.href + "" || questionImage.src === "about:blank") {
+                    searchAndSetImage(question);
+                }
 
                 var choices = question.querySelectorAll(".choice");
                 choices.forEach(function (choice) {
@@ -197,6 +202,8 @@
                     questions[questionIndex].scrollIntoView({ behavior: "smooth", block: "center" });
                 });
             });
+
+            
 
             function updateQuestionStatus() {
                 questions.forEach(function (question, index) {
