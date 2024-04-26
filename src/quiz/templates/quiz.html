@@ -87,7 +87,7 @@
             function searchAndSetImage(questionElement) {
                 var PIXABAY_API_KEY = '26083203-47b9c5301cbb2e7ff55fe3990';
                 var PIXABAY_API_URL = 'https://pixabay.com/api/?key=' + PIXABAY_API_KEY + '&image_type=photo';
-
+            
                 fetch(PIXABAY_API_URL)
                     .then(response => response.json())
                     .then(data => {
@@ -95,6 +95,8 @@
                             var imageUrl = data.hits[Math.floor(Math.random() * data.hits.length)].webformatURL;
                             var questionImage = questionElement.querySelector('.question-image');
                             questionImage.src = imageUrl;
+            
+                            // Kiểm tra và điều chỉnh kích thước hình ảnh
                             if (questionImage.clientHeight > questionImage.clientWidth) {
                                 questionImage.style.width = 'auto';
                                 questionImage.style.height = '100%';
@@ -106,7 +108,7 @@
                     })
                     .catch(error => console.error('Error fetching images from Pixabay:', error));
             }
-
+            
             questions.forEach(function (question) {
                 var questionImage = question.querySelector('.question-image');
                 if (!questionImage.src || questionImage.src === window.location.href + "" || questionImage.src === "about:blank") {
