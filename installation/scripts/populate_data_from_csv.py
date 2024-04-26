@@ -11,7 +11,7 @@ django.setup()
 from quiz.models import Topic, Question, Choice
 
 def run():
-    csv_file_path ="./scripts/Toiec.csv"   # Đường dẫn tới file CSV của bạn
+    csv_file_path ="./scripts/data.csv"   # Đường dẫn tới file CSV của bạn
     images_folder_path = "./scripts/img/"  # Đường dẫn tới thư mục chứa ảnh
 
     with open(csv_file_path, 'r', encoding='utf-8') as file:

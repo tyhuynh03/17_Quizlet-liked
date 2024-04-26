@@ -1,0 +1,80 @@
+Toiec,What is the capital of France?,Paris,True,Berlin,False,Roma,False,London,False,img1.jpg
+Toiec,What is the capital of Germany?,Berlin,True,Paris,False,London,False,Roma,False,img2.jpg
+Toiec,What is the capital of England?,Roma,False,London,True,Paris,False,Berlin,False,img3.jpg
+Toiec,Who wrote "Romeo and Juliet"?,William Shakespeare,True,Charles Dickens,False,Jane Austen,False,Alexander Fleming,True,img4.jpg
+Toiec,What is the currency of Japan?,Yen,True,Dollar,False,Euro,False,Won,False,img5.jpg
+Toiec,How many continents are there in the world?,7,True,5,False,6,False,4,False,img6.jpg
+Toiec,Who painted the Mona Lisa?,Leonardo da Vinci,True,Vincent van Gogh,False,Pablo Picasso,False,Isaac Newton,False,img7.jpg
+Toiec,Which planet is known as the Red Planet?,Mars,True,Venus,False,Jupiter,False,Earth,False,img8.jpg
+Toiec,Which is the largest ocean on Earth?,Pacific,True,Atlantic,False,Indian,False,Antarctic,False,img9.jpg
+Toiec,What is the tallest mountain in the world?,Mount Everest,True,K2,False,Kangchenjunga,False,Hymalia,False,img10.jpg
+Toiec,Who is known as the father of computers?,Charles Babbage,True,Alan Turing,False,Steve Jobs,False,Marie Curie,False,img11.jpg
+Toiec,What is the chemical symbol for water?,H2O,True,CO2,False,O2,False,N02,False,img12.jpg
+Toiec,Which country is famous for the pyramids?,Egypt,True,Greece,False,Italy,False,Russian,False,img13.jpg
+Toiec,What year did the Titanic sink?,1912,True,1908,False,1920,False,1921,False,img14.jpg
+Toiec,Who is the author of "Pride and Prejudice"?,Jane Austen,True,Emily Brontë,False,Charlotte Brontë,False,Thomas Edison,False,img15.jpg
+Toiec,What is the capital of Australia?,Canberra,True,Sydney,False,Melbourne,False,HaNoi,False,img16.jpg
+Toiec,What is the main ingredient in guacamole?,Avocado,True,Tomato,False,Onion,False,Apple,False,img17.jpg
+Toiec,Who invented the telephone?,Alexander Graham Bell,True,Thomas Edison,False,Albert Einstein,False,Marie Curie,False,img18.jpg
+Toiec,Which language is spoken in Brazil?,Portuguese,True,Spanish,False,English,False,Japanese,False,img19.jpg
+Toiec,Who discovered penicillin?,Alexander Fleming,True,Marie Curie,False,Isaac Newton,False,alexander arnold,False,img20.jpg
+Địa lý,Nước ta nằm ở vị trí:,Rìa phía Đông của bán đảo Đông Dương,True,Rìa phía Tây của bán đảo Đông Dương,False,Trung tâm châu Á,False,Phía đông Đông Nam Á,False
+Địa lý,Thủ đô của Nhật Bản là thành phố nào:,Tokyo,True,Kyoto,False,Osaka,False,Nagasaki,False
+Địa lý,Núi Kilimanjaro nằm ở quốc gia nào:,Kenya,False,Egypt,False,Ethiopia,False,Tanzania,True
+Địa lý,Sông Nile con sông dài nhất thế giới chảy qua quốc gia nào:,Egypt,True,Sudan,False,Kenya,False,Tanzania,False
+Địa lý,Đảo lớn nhất thế giới là đảo nào:,Java,False,New Guinea,False,Greenland,True,Borneo,False
+Địa lý,Núi Everest  nằm ở dãy núi nào:,Himalayas,True,Andes,False,Rockies,False,Alps,False
+Địa lý,Sahara nằm ở châu lục nào:,Asia,False,Africa,True,South America,False,North America,False
+Địa lý,Núi Phú Sĩ nằm ở đảo nào:,Honshu,True,Kyushu,False,Shikoku,False,Hokkaido,False
+Địa lý,Đỉnh cao nhất châu Âu là gì:,Elbrus,False,Mont Blanc,True,Matterhorn,False,K2,False
+Địa lý,Bờ biển dài nhất thế giới nằm ở quốc gia nào:,Canada,True,Norway,False,Australia,False,Brazil,False
+Địa lý,Quốc gia có diện tích nhỏ nhất thế giới là gì:,Vatican City,True,Monaco,False,San Marino,False,Tuvalu,False
+Địa lý,Quốc gia nào có dân số đông nhất thế giới:,China,True,India,False,United States,False,Indonesia,False
+Địa lý,Quốc gia nào có diện tích lớn nhất thế giới:,Russia,True,Canada,False,United States,False,China,False
+Địa lý,Đồng bằng lớn nhất thế giới là đâu:,Ganges-Brahmaputra,False,Nile,False,Mississippi-Missouri,False,Amazon,True
+Địa lý,Quốc gia nào có nhiều hồ nước nhất thế giới:,Canada,True,Finland,False,United States,False,Sweden,False
+Địa lý,Quốc gia nào không có sông:,Saudi Arabia,True,Qatar,False,Germany,False,France,False
+Địa lý,Sông dài nhất châu Á là gì:,Indus,False,Mekong,False,Yangtze,True,Ganges,False
+Địa lý,Quốc gia nào nằm ở bán đảo Skandinavia:,Sweden,True,Finland,False,Norway,False,Denmark,False
+Địa lý,Núi nào cao nhất ở châu Phi:,Kilimanjaro,True,Kenya,False,Ruwenori,False,Drakensberg,False
+Địa lý,Sông nào là con sông dài nhất thế giới:,Amazon,True,Nile,False,Yangtze,False,Mississippi,False
+Lịch sử,"Chiến lược ""Chiến tranh cục bộ"" của Mĩ ra đời trong hoàn cảnh nào ?","Cách mạng miền Nam phát triển mạnh mẽ, ""Chiến tranh đặc biệt"" đã bị phá sản về cơ bản.",True,"Quan hệ Liên Xô - Trung Quốc ngày càng xấu, khối đoàn kết trong phe xã hội chủ nghĩa đã rạn nứt.",False,"Trên thế giới, quan hệ Liên Xô - Trung Quốc ngày càng xấu, khối đoàn kết trong phe Xã hội chủ nghĩa đã rạn nứt.",False.1,Tất cả các ý trên.,False.2
+Lịch sử,"""Chiến tranh cục bộ"" khác ""Chiến tranh đặc biệt"" ở điểm nào ?","""Chiến tranh cục bộ"" là hình thức chiến tranh của chủ nghĩa thực dân mới.",False,"""Chiến tranh cục bộ"" được tiến hành dưới sự chỉ đạo của hệ thống cố vấn Mĩ.",False,"""Chiến tranh cục bộ"" chủ yếu được tiến hành bằng lực lượng quân viễn chinh Mĩ.",True,“Chiến tranh cục bộ” sử dụng vũ khí và phương tiện chiến tranh do Mĩ cung cấp.,False
+Lịch sử,"Chiến thắng nào khẳng định quân dân Miền Nam có thể đánh bại quân chủ lực Mĩ trong ""Chiến tranh cục bộ"" ?",Chiến thắng Núi Thành.,False,Chiến thắng Vạn Tường.,True,Chiến thắng mùa khô 1965 - 1966.,False,Chiến thắng mùa khô 1966 - 1967.,False
+Lịch sử,Quân đội nước nào từng tham gia vào cuộc chiến tranh xâm lược của Mĩ ở miền Nam Việt Nam?,Inđônêxia.,False,Malaixia.,False,Hàn Quốc. ,True,Singapo.,False
+Lịch sử,"Vị Tổng thống nào của nước Mĩ đã quyết định áp dụng chiến lược ""Chiến tranh cục bộ"" ở miền Nam Việt Nam ?",Aixenhao. ,False,Kennơđi.,False,Giônxơn.   ,True,Níchxơn.,False
+Lịch sử,"Sự kiện nào đánh dấu sự thất bại hoàn toàn của chiến lược ""Chiến tranh cục bộ"" của đế quốc Mĩ?",Chiến thắng mùa khô 1965 - 1966.,False,Chiến thắng mùa khô 1966 - 1967.,False,Cuộc Tổng tiến công và nổi dậy Xuân Mậu Thân 1968.,True,Cuộc Tiến công chiến lược năm 1972.,False
+Lịch sử,Chiến thắng Vạn Tường (1963) đã mở ra cao trào,"“đánh nhanh tiến nhanh, đánh chắc tiến chắc”.",False,"“đánh cho Mĩ cút, đánh cho ngụy nhào”.",False,“tất cả vì miền Nam thân yêu”.,False,"“tìm Mĩ mà đánh, lùng ngụy mà diệt”.",True
+Lịch sử,"Cơ sở nào để ta khẳng định với chiến thắng Vạn Tường, quân dân miền Nam hoàn toàn có khả năng đánh bại quân Mĩ ?",Đây là một trận đánh mà quân Mĩ bị động về kế hoạch tác chiến nên đã thất bại.,False,Quân Mĩ trong trận này có ưu thế vượt trội về quân số và phương tiện chiến tranh.,True,Địa bàn xảy ra trận đánh hoàn toàn không có lợi cho cả ta và Mĩ.,False,Quân Mĩ không coi đây là địa bàn chiến lược nên đã rút lui.,False
+Lịch sử,Hướng tiến công chiến lược chính của quân Mĩ trong mùa khô 1965 -1966 là,"Đông Nam Bộ, Tây Nguyên.",False,"Tây Nam Bộ, Liên khu V.",False,"Đông Nam Bộ, Liên khu V.",True,"Nam Trung Bộ, Tây Nguyên.",False
+Lịch sử,"Trong cuộc tiến công chiến lược mùa khô 1966 - 1967, Mĩ đã tiến hành bao nhiêu cuộc hành quân chiến lược ?",890 cuộc hành quân.,False,450 cuộc hành quân.,False,980 cuộc hành quân.    ,False,895 cuộc hành quân.,True
+Lịch sử,Căn cứ Dương Minh Châu nằm ở,tỉnh Tây Ninh,True,tỉnh Đồng Nai.,False,tỉnh Sóc Trăng.,False,tỉnh An Giang.,False
+Lịch sử,Cuộc Tổng tiến công và nổi dậy Xuân Mậu Thân 1968 có gì khác so với các cuộc tiến công trước đó của quân ta ?,Đây là cuộc tiến công đầu tiên của quân giải phóng miền Nam có sự phối hợp nổi dậy của quần chúng.,False,Đây là cuộc tiến công có quy mô lớn trên toàn miền Nam mà hướng trọng tâm là các đô thị.,True,Đây là cuộc tiến công lớn đầu tiên mà quân giải phóng miền Nam trực tiếp chiến đấu với quân viễn chinh Mĩ.,False,Đây là cuộc tiến công lớn của quân dân miền Nam và lần đầu tiên làm thất bại chiến lược chiến tranh của địch.,False
+Lịch sử,"Cuộc Tổng tiến công và nổi dậy Mậu Thân 1968 đã mở ra một bước ngoặt trong cuộc kháng chiến chống Mĩ, cứu nước của nhân dân ta, vì",đã buộc Mĩ phải ngồi vào bàn đàm phán với ta tại Pari.,True,đã buộc Mĩ phải rút toàn bộ quân viễn chinh về nước.,False,đã buộc Mĩ phải kí Hiệp định Pari về chấm dứt chiến tranh ở Việt Nam.,False,"đã đánh bại hoàn toàn chiến lược ""Chiến tranh đặc biệt” của đế quốc Mĩ.",False
+Lịch sử,Những tỉnh đầu tiên phải đương đầu với cuộc chiến tranh phá hoại bằng không quân và hải quân lần thứ nhất của đế quốc Mĩ là,"Quảng Bình, Hải Phòng, Nghệ An.",False,"Hải Phòng, Nghệ An, Thanh Hoá.",False,"Quảng Ninh, Hà Tĩnh, Thanh Hoá.",False,"Quảng Bình, Nghệ An, Quảng Ninh.",True
+Lịch sử,Mĩ đã dựa vào cái cớ nào để chính thức tiến hành cuộc chiến tranh bằng không quân và hải quân phá hoại miền Bắc lần thứ nhất?,Lấy cớ quân dân miền Nam mở cuộc Tổng tiến công và nổi dậy năm 1968.,False,Lấy cớ quân đội Việt Nam Dân chủ Cộng hòa bắn tàu của Mĩ ở Vịnh Bắc Bộ.,False,Lấy cớ Quân giải phóng đập tan cuộc hành quân Lam Sơn 719 của Mĩ.,False,Lấy cớ Quân giải phóng miền Nam tiến công doanh trại quân Mĩ ở Plâyku.,True
+Lịch sử,Nội dung nào không phản ánh âm mưu của Mĩ khi tiến hành chiến tranh phá hoại miền Bắc lần thứ nhất?,Phá công cuộc xây dựng chủ nghĩa xã hội ở miền Bắc.,False,Ngăn chặn nguồn chi viện từ bên ngoài vào miền Bắc.,False,"Tạo ra ưu thế trên bàn đàm phán, buộc ta phải kí hiệp định có lợi cho Mĩ.",True,Làm lung lay ý chí chống Mĩ của nhân dân ta ở hai miền đất nước.,False
+Lịch sử,Chiến thắng nào của quân dân miền Nam đã buộc Mĩ phải tuyên bố chấm dứt cuộc chiến tranh phá hoại miền Bắc lần thứ nhất?,Chiến thắng trong mùa khô 1965 – 1966.,False,Chiến thắng trong mùa khô 1966 – 1967.,False,Cuộc Tổng tiến công và nổi dậy Xuân Mậu Thân 1968.,True,Cuộc Tiến công chiến lược xuân – hè năm 1972.,False
+Lịch sử,"Tuyến đường vận chuyển chiến lược Bắc - Nam trong cuộc kháng chiến chống Mĩ, cứu nước có tên gọi là",đường Hồ Chí Minh.,True,đường Sài Gòn.,False,đường Lam Sơn.,False,đường Đồng Lộc.,False
+Lịch sử,Một phong trào thi đua trên lĩnh vực sản xuất nông nghiệp của nhân dân miền Bắc trong những năm chống chiến tranh phá hoại của đế quốc Mĩ là,“ba mục tiêu”.,True,“ba điểm cao”.,False,“hai giỏi”.,False,“ba tốt”.,False
+Lịch sử,Âm mưu của chiến lược “Việt Nam hóa chiến tranh” của đế quốc Mĩ là,dùng người Việt đánh người Việt.,True,dùng người Mĩ đánh người Việt.,False,giành lại thế chủ động trên chiến trường.,False,tạo ra ưu thế về binh lực và hỏa lực.,False
+An toàn thông tin,Biệt đội siêu nhân mạng sẽ đặt mật khẩu như thế nào?,tuan1234,False,password,False,123456,False,Vuiquadithoi0_,True
+An toàn thông tin,Có người lạ gửi tin nhắn qua Facebook kèm link lạ thì Biệt đội siêu nhân mạng sẽ làm gì?,Không nhấp vào do có thể bị mất tài khoản Fb,True,Nhấp vào xem thử nếu thấy không ổn thì thoát ra,False,Nên nhấp vào vì link đó an toàn,False,Nhấp hay không nhấp cũng được,False
+An toàn thông tin,Có nên dùng một mật khẩu cho nhiều ứng dụng khác nhau không?,Có vì như vậy dễ nhớ,False,Không vì có thể bị mất nhiều tài khoản cùng lúc,True,Dùng 1 hay nhiều mật khẩu thì đều an toàn như nhau,False,Có vì không có gì quan trọng,False
+An toàn thông tin,Theo Biệt đội siêu nhân mạng khi bị mất điện thoại thì cần làm gì?,Xóa hết app cũ,False,Cứ vui chơi như bình thường,False,Đổi mật khẩu tất cả tài khoản có cài đặt trên thiết bị đã bị mất,True,Không cần làm gì cả,False
+An toàn thông tin,File nào trên máy tính có thể nhiễm virus?,Excel,False,Tất cả các file trên,True,Word,False,Powerpoint,False
+An toàn thông tin,Virus máy tính lây lan bằng cách nào?,Qua đường máu,False,Qua không khí,False,Qua các tệp tin sao chép dữ liệu từ USB,True,Qua đường miệng,False
+An toàn thông tin,Bạn không nên cho người khác biết thông tin gì?,Hình ảnh cá nhân,False,Số điện thoại,False,Địa chỉ,False,Tất cả các ý trên,True
+An toàn thông tin,Đố Biệt đọi siêu nhân mạng thì trang web nào sau đây có thể là lừa đảo?,https://shoppee.vn/,True,https://shopee.vn/,False,https://tiki.vn/,False,https://www.lazada.vn/,False
+An toàn thông tin,Khi muốn tải phần mềm về điện thoại thì nên tải ở đâu?,Tư các nguồn uy tín: CH Play Apple store…,True,Từ các website bất kì trên mạng,False,Từ các nguồn cung cấp phần mềm phá khóa (crack) nếu phần mềm đòi hỏi bản quyền,False,Từ website lậu,False
+An toàn thông tin,Khi Biệt đội siêu nhân mạng cần sự trợ giúp thì phải làm gì? ,111,False,Nói với ba mẹ,False,Nói với thầy cô,False,Tất cả các ý trên,True
+An toàn thông tin,Virus máy tính là gì?,Là một đoạn mã chương trình được thiết kế để xâm nhập vào máy tính trái phép…,True,Virus là những thực thể cực nhỏ có lõi là vật chất di truyền,False,Virus là một loại vi khuẩn gây hại đến sức khỏe,False,Virus là những tác nhân truyền nhiễm,False
+An toàn thông tin,Mật khẩu mạnh cần có bao nhiêu ký tự?,8-10 ký tự,False,Trên 12 ký tự,True,6-8 ký tự,False,Dưới 6 ký tự,False
+An toàn thông tin,Đâu không phải là cách Biệt đội siêu anh hùng bảo vệ thông tin cá nhân trực tuyến?,Thay đổi mật khẩu thường xuyên,False,Mật khẩu dài và có  kí tự đặc biệt,False,Chia sẻ mật khẩu với bạn bè,True,Dùng mật khẩu mạnh,False
+An toàn thông tin,Khi nào bạn nên cập nhật phần mềm diệt virus?,Mỗi tháng một lần,False,Khi có bản cập nhật mới,True,Chỉ khi máy tính bị virus,False,Mỗi tuần một lần,False
+An toàn thông tin,Đâu là ví dụ về một mật khẩu yếu?,StrongPass!9,False,Abc@1234,False,12345678,True,Secure*88#,False
+An toàn thông tin,Biệt đội siêu nhân mạng nên làm gì nếu gặp nội dung bạo lực trên Tiktok?,Xem tiếp,False,Chia sẻ với bạn bè,False,Bỏ qua,False,Báo cho người lớn,True
+An toàn thông tin,Bạn cần làm gì sau khi sử dụng máy tính công cộng?,Đăng xuất khỏi tất cả tài khoản,True,Tắt màn hình,False,Khóa máy tính,False,Để nguyên thông tin đăng nhập,False
+An toàn thông tin,Đâu là cách không an toàn khi bạn sử dụng mạng xã hội?,Không chia sẻ vị trí,False,Không đăng ảnh cá nhân,False,Chấp nhận lời mời kết bạn từ người lạ,True,Đặt quyền riêng tư cao nhất,False
+An toàn thông tin,Biệt đội siêu nhân mạng nên làm gì với email lạ?,Báo cho người lớn,True,Trả lời ngay lập tức,False,Lưu vào mục quan trọng,False,Mở tất cả các đính kèm,False
+An toàn thông tin,Đâu là biện pháp an toàn khi sử dụng Wi-Fi công cộng?,Chỉ truy cập các trang web không cần đăng nhập,False,Chia sẻ mật khẩu Wi-Fi với bạn bè,False,Sử dụng VPN,True,Kết nối mà không cần mật khẩu,False
