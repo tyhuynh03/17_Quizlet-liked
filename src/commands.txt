@@ -1,0 +1,26 @@
+
+# Cài đặt các thư viện cần thiết
+pip install -r requirements.txt
+#Tại thư mục 17_Quizlet_liked chạy lệnh copy thư mục scripts vào src
+xcopy installation\scripts src\scripts /s /e /i
+
+# điều hướng đến thư mục src
+cd /src
+
+# 2 lệnh sau để tạo cơ sở dữ liệu và các bảng trong cơ sở dữ liệu
+python manage.py makemigrations 
+ptython manage.py migrate
+
+# Tạo superuser để quản lý trang web
+python manage.py createsuperuser
+
+
+NOTE:trước khi chạy lệnh 2 lệnh dưới cần copy thư mục scripts vào src mới chạy được
+
+
+# Tạo dữ liệu người dùng ảo
+python manage.py runscript import_data 
+
+
+# Tạo bộ câu hỏi mẫu
+python manage.py runscript populate_data_from_csv
