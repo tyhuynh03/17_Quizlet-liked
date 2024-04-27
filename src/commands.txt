@@ -5,11 +5,11 @@ pip install -r requirements.txt
 xcopy installation\scripts src\scripts /s /e /i
 
 # điều hướng đến thư mục src
-cd /src
+cd src
 
 # 2 lệnh sau để tạo cơ sở dữ liệu và các bảng trong cơ sở dữ liệu
 python manage.py makemigrations 
-ptython manage.py migrate
+python manage.py migrate
 
 # Tạo superuser để quản lý trang web
 python manage.py createsuperuser
@@ -24,3 +24,7 @@ python manage.py runscript import_data
 
 # Tạo bộ câu hỏi mẫu
 python manage.py runscript populate_data_from_csv
+
+
+# Chạy server
+python manage.py runserver
