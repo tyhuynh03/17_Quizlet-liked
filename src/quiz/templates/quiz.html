@@ -28,26 +28,32 @@
         {% for question in questions %}
         <div class="question-card" data-question="{{ forloop.counter }}">
             <div class="question">
-                <h2>{{ forloop.counter }}. {{ question.text }}</h2>
-                <div class="question-image-container">
-                    {% if question.image %}
-                    <img class="question-image" alt="Ảnh minh họa" src="{{ question.image.url }}" />
-                    {% else %}
-                    <img class="question-image" alt="Ảnh minh họa" src="" />
-                    {% endif %}
-                </div>
-                <div class="choices">
-                    {% for choice in question.choices.all %}
-                    <div class="choice" data-question="{{ forloop.parentloop.counter }}"
-                        data-choice="{{ forloop.counter }} ">
-
-                        <input type="radio" id="choice{{ choice.id }}" name="question{{ question.id }}"
-                            value="{{ choice.id }}">
-                        <label for="choice{{ choice.id }}">{{ choice.text }}</label>
-                    </div>
-                    {% endfor %}
-                </div>
+    <h2>{{ forloop.counter }}. {{ question.text }}</h2>
+    <!-- Hiển thị file âm thanh -->
+    {% if question.audio %}
+        <audio controls>
+            <source src="{{ question.audio.url }}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    {% endif %}
+    <!-- Hiển thị ảnh -->
+    <div class="question-image-container">
+        {% if question.image %}
+            <img class="question-image" alt="Ảnh minh họa" src="{{ question.image.url }}" />
+        {% else %}
+            <img class="question-image" alt="Ảnh minh họa" src="" />
+        {% endif %}
+    </div>
+    <div class="choices">
+        {% for choice in question.choices.all %}
+            <div class="choice" data-question="{{ forloop.parentloop.counter }}" data-choice="{{ forloop.counter }} ">
+                <input type="radio" id="choice{{ choice.id }}" name="question{{ question.id }}" value="{{ choice.id }}">
+                <label for="choice{{ choice.id }}">{{ choice.text }}</label>
             </div>
+        {% endfor %}
+    </div>
+</div>
+
         </div>
         {% endfor %}
 
