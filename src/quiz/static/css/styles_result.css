@@ -44,22 +44,23 @@ h1 {
 }
 
 .choices {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
 
 .choice {
-    position: relative;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    cursor: no-drop;
-    display: flex;
-    align-items: center;
-    height: 50px;
-    pointer-events: none;
-
+  position: relative;
+  padding: 15px;
+  /* Tăng độ rộng của padding */
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  /* Tăng bán kính của góc bo */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: auto;
+  /* Đặt chiều cao tự động để phù hợp với nội dung */
 }
 
 
@@ -154,11 +155,14 @@ h1 {
 }
 
 .choice label {
-    cursor: pointer;
-    width: 300px;
-    text-align: center;
-    height: 50px;
-    line-height: 50px;
+  cursor: pointer;
+  width: 100%;
+  /* Đảm bảo chiều rộng của label mở rộng hết khung của đáp án */
+  text-align: center;
+  height: auto;
+  /* Chiều cao tự động để đáp án xuống hàng nếu cần */
+  line-height: 1.5;
+  /* Đảm bảo khoảng cách giữa các dòng chữ */
 }
 
 #question-status {
