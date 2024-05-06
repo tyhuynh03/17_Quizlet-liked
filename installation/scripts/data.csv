@@ -18,26 +18,26 @@ Toiec,What is the main ingredient in guacamole?,Avocado,True,Tomato,False,Onion,
 Toiec,Who invented the telephone?,Alexander Graham Bell,True,Thomas Edison,False,Albert Einstein,False,Marie Curie,False,img18.jpg
 Toiec,Which language is spoken in Brazil?,Portuguese,True,Spanish,False,English,False,Japanese,False,img19.jpg
 Toiec,Who discovered penicillin?,Alexander Fleming,True,Marie Curie,False,Isaac Newton,False,alexander arnold,False,img20.jpg
-Địa lý,Nước ta nằm ở vị trí:,Rìa phía Đông của bán đảo Đông Dương,True,Rìa phía Tây của bán đảo Đông Dương,False,Trung tâm châu Á,False,Phía đông Đông Nam Á,False
-Địa lý,Thủ đô của Nhật Bản là thành phố nào:,Tokyo,True,Kyoto,False,Osaka,False,Nagasaki,False
-Địa lý,Núi Kilimanjaro nằm ở quốc gia nào:,Kenya,False,Egypt,False,Ethiopia,False,Tanzania,True
-Địa lý,Sông Nile con sông dài nhất thế giới chảy qua quốc gia nào:,Egypt,True,Sudan,False,Kenya,False,Tanzania,False
-Địa lý,Đảo lớn nhất thế giới là đảo nào:,Java,False,New Guinea,False,Greenland,True,Borneo,False
-Địa lý,Núi Everest  nằm ở dãy núi nào:,Himalayas,True,Andes,False,Rockies,False,Alps,False
-Địa lý,Sahara nằm ở châu lục nào:,Asia,False,Africa,True,South America,False,North America,False
-Địa lý,Núi Phú Sĩ nằm ở đảo nào:,Honshu,True,Kyushu,False,Shikoku,False,Hokkaido,False
-Địa lý,Đỉnh cao nhất châu Âu là gì:,Elbrus,False,Mont Blanc,True,Matterhorn,False,K2,False
-Địa lý,Bờ biển dài nhất thế giới nằm ở quốc gia nào:,Canada,True,Norway,False,Australia,False,Brazil,False
-Địa lý,Quốc gia có diện tích nhỏ nhất thế giới là gì:,Vatican City,True,Monaco,False,San Marino,False,Tuvalu,False
-Địa lý,Quốc gia nào có dân số đông nhất thế giới:,China,True,India,False,United States,False,Indonesia,False
-Địa lý,Quốc gia nào có diện tích lớn nhất thế giới:,Russia,True,Canada,False,United States,False,China,False
-Địa lý,Đồng bằng lớn nhất thế giới là đâu:,Ganges-Brahmaputra,False,Nile,False,Mississippi-Missouri,False,Amazon,True
-Địa lý,Quốc gia nào có nhiều hồ nước nhất thế giới:,Canada,True,Finland,False,United States,False,Sweden,False
-Địa lý,Quốc gia nào không có sông:,Saudi Arabia,True,Qatar,False,Germany,False,France,False
-Địa lý,Sông dài nhất châu Á là gì:,Indus,False,Mekong,False,Yangtze,True,Ganges,False
-Địa lý,Quốc gia nào nằm ở bán đảo Skandinavia:,Sweden,True,Finland,False,Norway,False,Denmark,False
-Địa lý,Núi nào cao nhất ở châu Phi:,Kilimanjaro,True,Kenya,False,Ruwenori,False,Drakensberg,False
-Địa lý,Sông nào là con sông dài nhất thế giới:,Amazon,True,Nile,False,Yangtze,False,Mississippi,False
+Địa lý,Nước ta nằm ở vị trí:,Rìa phía Đông của bán đảo Đông Dương,True,Rìa phía Tây của bán đảo Đông Dương,False,Trung tâm châu Á,False,Phía đông Đông Nam Á,False,geography1.jpg
+Địa lý,Thủ đô của Nhật Bản là thành phố nào:,Tokyo,True,Kyoto,False,Osaka,False,Nagasaki,False,geography2.jpg
+Địa lý,Núi Kilimanjaro nằm ở quốc gia nào:,Kenya,False,Egypt,False,Ethiopia,False,Tanzania,True,geography3.jpg
+Địa lý,Sông Nile con sông dài nhất thế giới chảy qua quốc gia nào:,Egypt,True,Sudan,False,Kenya,False,Tanzania,False,geography4.jpg
+Địa lý,Đảo lớn nhất thế giới là đảo nào:,Java,False,New Guinea,False,Greenland,True,Borneo,False,geography5.jpg
+Địa lý,Núi Everest  nằm ở dãy núi nào:,Himalayas,True,Andes,False,Rockies,False,Alps,False,geography6.jpg
+Địa lý,Sahara nằm ở châu lục nào:,Asia,False,Africa,True,South America,False,North America,False,geography7.jpg
+Địa lý,Núi Phú Sĩ nằm ở đảo nào:,Honshu,True,Kyushu,False,Shikoku,False,Hokkaido,False,geography8.jpg
+Địa lý,Đỉnh cao nhất châu Âu là gì:,Elbrus,False,Mont Blanc,True,Matterhorn,False,K2,False,geography9.jpg
+Địa lý,Bờ biển dài nhất thế giới nằm ở quốc gia nào:,Canada,True,Norway,False,Australia,False,Brazil,False,geography10.jpg
+Địa lý,Quốc gia có diện tích nhỏ nhất thế giới là gì:,Vatican City,True,Monaco,False,San Marino,False,Tuvalu,False,geography11.jpg
+Địa lý,Quốc gia nào có dân số đông nhất thế giới:,China,True,India,False,United States,False,Indonesia,False,geography12.jpg
+Địa lý,Quốc gia nào có diện tích lớn nhất thế giới:,Russia,True,Canada,False,United States,False,China,False,geography13.jpg
+Địa lý,Đồng bằng lớn nhất thế giới là đâu:,Ganges-Brahmaputra,False,Nile,False,Mississippi-Missouri,False,Amazon,True,geography14.jpg
+Địa lý,Quốc gia nào có nhiều hồ nước nhất thế giới:,Canada,True,Finland,False,United States,False,Sweden,False,geography15.jpg
+Địa lý,Quốc gia nào không có sông:,Saudi Arabia,True,Qatar,False,Germany,False,France,False,geography16.jpg
+Địa lý,Sông dài nhất châu Á là gì:,Indus,False,Mekong,False,Yangtze,True,Ganges,False,geography17.jpg
+Địa lý,Quốc gia nào nằm ở bán đảo Skandinavia:,Sweden,True,Finland,False,Norway,False,Denmark,False,geography18.jpg
+Địa lý,Núi nào cao nhất ở châu Phi:,Kilimanjaro,True,Kenya,False,Ruwenori,False,Drakensberg,False,geography19.jpg
+Địa lý,Sông nào là con sông dài nhất thế giới:,Amazon,True,Nile,False,Yangtze,False,Mississippi,False,geography20.jpg
 Lịch sử,"Chiến lược ""Chiến tranh cục bộ"" của Mĩ ra đời trong hoàn cảnh nào ?","Cách mạng miền Nam phát triển mạnh mẽ, ""Chiến tranh đặc biệt"" đã bị phá sản về cơ bản.",True,"Quan hệ Liên Xô - Trung Quốc ngày càng xấu, khối đoàn kết trong phe xã hội chủ nghĩa đã rạn nứt.",False,"Trên thế giới, quan hệ Liên Xô - Trung Quốc ngày càng xấu, khối đoàn kết trong phe Xã hội chủ nghĩa đã rạn nứt.",False.1,Tất cả các ý trên.,False.2
 Lịch sử,"""Chiến tranh cục bộ"" khác ""Chiến tranh đặc biệt"" ở điểm nào ?","""Chiến tranh cục bộ"" là hình thức chiến tranh của chủ nghĩa thực dân mới.",False,"""Chiến tranh cục bộ"" được tiến hành dưới sự chỉ đạo của hệ thống cố vấn Mĩ.",False,"""Chiến tranh cục bộ"" chủ yếu được tiến hành bằng lực lượng quân viễn chinh Mĩ.",True,“Chiến tranh cục bộ” sử dụng vũ khí và phương tiện chiến tranh do Mĩ cung cấp.,False
 Lịch sử,"Chiến thắng nào khẳng định quân dân Miền Nam có thể đánh bại quân chủ lực Mĩ trong ""Chiến tranh cục bộ"" ?",Chiến thắng Núi Thành.,False,Chiến thắng Vạn Tường.,True,Chiến thắng mùa khô 1965 - 1966.,False,Chiến thắng mùa khô 1966 - 1967.,False
