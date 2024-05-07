@@ -24,7 +24,7 @@
             <a href="#" onclick="showLibrary()">Thư viện</a>
             <a href="{% url 'question_list' %}">Chủ đề</a>
             <a href="{% url 'info_page' %}">Liên hệ</a>
-            <a href="{% url 'user' %}">Tài khoản</a>
+            <a href="{% url 'user_info' user.id %}">Tài khoản</a>
             <li class="nav-item dropdown">
                 <button class="btn btn-dark" data-bs-toggle="dropdown" aria-expanded="false">
                     T

@@ -107,6 +107,23 @@ class UserDetailView(APIView):
         return Response(serializer.data)
 
 
+from django.shortcuts import render
+from quiz.models import Topic, Question
+@login_required
+def user_info(request, pk):
+    user = User.objects.filter(id=pk).first()  # Lấy thông tin người dùng dựa trên id
+    if user is None:
+        # Xử lý trường hợp không tìm thấy người dùng
+        return render(request, 'user_not_found.html', {'message': 'User not found'})
+
+    # Đếm số lượng topic mà người dùng đã tạo
+    topic_count = Topic.objects.filter(user=user).count()
+
+    # Đếm số lượng câu hỏi mà người dùng đã tạo
+    question_count = Question.objects.filter(topic__user=user).count()
+
+    # Truyền thông tin người dùng và các thông tin đã tính được vào template
+    return render(request, 'user_info.html', {'user_data': user, 'topic_count': topic_count, 'question_count': question_count}) #, 'quiz_count': quiz_count
 class UserListView(APIView):
     def get(self, request):
         users = User.objects.all()
