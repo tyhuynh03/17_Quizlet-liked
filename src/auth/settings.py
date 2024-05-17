@@ -25,7 +25,8 @@ SECRET_KEY = "django-insecure-tn46@pltp*jmo1^xihm+-!t@d#g1r2g0g_&yuhql*!o)dmsad+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['one7-quizlet-liked.onrender.com']
+
 
 
 
