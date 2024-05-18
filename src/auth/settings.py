@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-tn46@pltp*jmo1^xihm+-!t@d#g1r2g0g_&yuhql*!o)dmsad+
 DEBUG = True
 
 ALLOWED_HOSTS = ['one7-quizlet-liked.onrender.com']
-CSRF_TRUSTED_ORIGINS = ['one7-quizlet-liked.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://one7-quizlet-liked.onrender.com']
 
 
 
