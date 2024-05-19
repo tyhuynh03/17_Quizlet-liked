@@ -1,0 +1,171 @@
+body {
+    padding-top: 100px; /* Thêm phần đệm để tránh header */
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000; /* Đảm bảo header luôn ở trên cùng */
+    padding: 10px 0;
+    box-shadow: 0 4px 2px -2px gray; /* Tùy chọn: thêm bóng đổ cho header */
+}
+
+header h2 a.logo {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.search-bar {
+    position: relative;
+    margin-right: 20px;
+    /* Để tạo khoảng cách với phần tử tiếp theo */
+}
+
+.search-bar input[type="text"] {
+    width: 400px;
+    /* Độ rộng của ô tìm kiếm */
+    padding: 10px;
+    /* Khoảng cách bên trong của ô tìm kiếm */
+    border: 1px solid #ccc;
+    /* Viền ô tìm kiếm */
+    border-radius: 20px;
+    /* Độ cong của viền */
+    outline: none;
+    /* Loại bỏ đường viền khi ô tìm kiếm được chọn */
+    transition: all 0.3s ease-in-out;
+    /* Hiệu ứng chuyển đổi mượt mà */
+}
+
+.search-bar {
+    position: relative;
+}
+
+.search-bar input[type="text"] {
+    padding-right: 30px;
+    /* Đảm bảo khoảng cách đủ để hiển thị icon search */
+}
+
+.search-bar i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    /* Điều chỉnh vị trí của icon search */
+    transform: translateY(-50%);
+}
+.navigation {
+    display: inline-block;
+    margin-left: auto;
+}
+
+.navigation a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.navigation .dropdown-menu {
+    min-width: 200px;
+}
+
+.container {
+    padding: 20px;
+}
+
+.box-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    width: calc(33.333% - 20px); /* Tùy chọn: điều chỉnh chiều rộng cho phù hợp */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.box .title a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.description-box {
+    margin-top: 10px;
+}
+
+.description {
+    color: #555;
+}
+
+.SetPreviewCard-creator {
+    margin-top: 10px;
+    color: #888;
+}
+
+/* Các phần còn lại của CSS */
+.create-question-box {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.create-question-btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.create-question-btn:hover {
+    background-color: #0056b3;
+}
+
+.content-6 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.content-item {
+    width: 20%;
+}
+
+.content-item h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.content-item a {
+    display: block;
+    text-decoration: none;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.content-item a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.media-icons a {
+    margin: 0 10px;
+    color: #007bff;
+}
+
+.media-icons a:hover {
+    color: #0056b3;
+}

@@ -203,6 +203,21 @@ def user_update_view(request, user_id):
             messages.error(request, 'Failed to update user information')
             return redirect('home_admin')    
 
+def search(request):
+    query = request.GET.get('q')
+    if query:
+        topics = Topic.objects.filter(name__icontains=query)
+        questions = Question.objects.filter(text__icontains=query)
+    else:
+        topics = Topic.objects.all()
+        questions = Question.objects.all()
+    
+    context = {
+        'topics': topics,
+        'questions': questions,
+        'query': query,
+    }
+    return render(request, 'search_results.html', context)
 class HomeAdminView(LoginRequiredMixin, UserPassesTestMixin, TemplateView):
     def test_func(self):
         return self.request.user.is_staff
