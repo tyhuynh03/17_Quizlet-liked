@@ -6,7 +6,7 @@
 
 ### 3.3. Database Diagram
 
-
+Sơ đồ trên Hệ quản trị CSDL
 
 ![Sơ đồ trên Hệ quản trị CSDL](./images/Database%20Diagram.JPG)
 
