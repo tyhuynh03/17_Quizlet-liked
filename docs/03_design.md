@@ -8,7 +8,7 @@
 
 Sơ đồ trên Hệ quản trị CSDL
 
-[Database Diagram](./images/Database%20Diagram.JPG)
+![Alt text](./images/Database%20Diagram.JPG)
 
 ### 3.4. Screen flow
 
