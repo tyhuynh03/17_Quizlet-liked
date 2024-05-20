@@ -2,8 +2,6 @@
 
 ### 5.1 Phân công
 
-### 5.1 Phân công
-
 | STT | Họ và tên       | Công việc                                                  |
 |-----|-----------------|------------------------------------------------------------|
 | 1   | Huỳnh Tấn Tỷ    | - Xây dựng Backend<br>- Thiết kế và xây dựng database<br>- Tạo bộ câu hỏi mẫu<br>- Quản lý source code trên git và deploy lên hosting |
