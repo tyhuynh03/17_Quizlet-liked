@@ -2,7 +2,15 @@
 
 ### 5.1 Phân công
 
-Bảng phân công công việc của các thành viên trong team. Thành viên nào làm những gì
+### 5.1 Phân công
+
+| STT | Họ và tên       | Công việc                                                  |
+|-----|-----------------|------------------------------------------------------------|
+| 1   | Huỳnh Tấn Tỷ    | - Xây dựng Backend<br>- Thiết kế và xây dựng database<br>- Tạo bộ câu hỏi mẫu<br>- Quản lý source code trên git và deploy lên hosting |
+| 2   | Nguyễn Khắc Luật| - Xây dựng Frontend<br>- Tạo bộ câu hỏi mẫu<br>- Fix các lỗi của dự án |
+| 3   | Hoàng Thanh Tú  | - Xây dựng Frontend<br>- Tạo bộ câu hỏi mẫu<br>- Thiết kế thêm hình ảnh vào dự án<br>- Fix các lỗi của dự án |
+| 4   | Phạm Nhựt Minh  | - Xây dựng Backend<br>- Thiết kế và xây dựng database<br>- Tạo bộ câu hỏi mẫu<br>- Làm chức năng tìm kiếm |
+
 
 ### 5.2 Nhật ký
 
