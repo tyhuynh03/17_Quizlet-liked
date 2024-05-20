@@ -6,7 +6,7 @@
 - Một số sceenshot của ứng dụng
 ![Alt text](installation/scripts/img/home.png)
 ![Alt text](installation/scripts/img/login.png)
-![Alt text](installation/scripts/img/quizlet.png.png)
+![Alt text](installation/scripts/img/quizlet.png)
 
 ## CÀI ĐẶT
 
