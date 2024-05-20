@@ -5,6 +5,9 @@
 - Bạn có thể trải nghiệm ứng dụng ở đây [LINK](https://one7-quizlet-liked.onrender.com/)
 - Một số sceenshot của ứng dụng
 ![Alt text](installation/scripts/img/home.png)
+![Alt text](installation/scripts/img/login.png)
+![Alt text](installation/scripts/img/quizlet.png.png)
+
 ## CÀI ĐẶT
 
 Hướng dẫn cài đặt và chạy sau khi pull project từ github về (Lưu ý: hướng dẫn phải chạy được). Bao gồm:
