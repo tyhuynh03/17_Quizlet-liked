@@ -4,9 +4,9 @@
 
 - Bạn có thể trải nghiệm ứng dụng ở đây [LINK](https://one7-quizlet-liked.onrender.com/)
 - Một số sceenshot của ứng dụng
-![Alt text](installation/scripts/img/home.png)
-![Alt text](installation/scripts/img/login.png)
-![Alt text](installation/scripts/img/quizlet.png)
+![Alt text](./docs/images/home.png)
+![Alt text](./docs/images/login.png)
+![Alt text](./docs/images/quizlet.png)
 
 ## CÀI ĐẶT
 

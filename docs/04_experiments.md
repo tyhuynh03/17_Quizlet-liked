@@ -41,14 +41,14 @@ Trong dự án này, chúng tôi đã sử dụng một loạt các công nghệ
  ### 4.2. Giao diện ứng dụng 
 Giao diện trang home
 
-![Alt text](installation/scripts/img/home.png) 
+![Alt text](./images/home.png) 
 
 Giao diện trang đăng nhập
 
-![Alt text](installation/scripts/img/login.png)
+![Alt text](./images/login.png)
 
 Giao diện trang làm bài quiz
-![Alt text](installation/scripts/img/quizlet.png.png)
+![Alt text](./images/quizlet.png)
 
 
 ### 4.3. Kết quả
