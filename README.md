@@ -6,7 +6,7 @@ Quizlet là một ứng dụng học tập trực tuyến giúp người dùng t
 - Học sinh và sinh viên: Sử dụng để ôn tập và kiểm tra kiến thức các môn học.
 - Giáo viên và giảng viên: Tạo và quản lý các bài kiểm tra cho học sinh.
 - Người tự học: Tự kiểm tra và cải thiện kỹ năng và kiến thức cá nhân.
-Các chức năng chính:
+# Các chức năng chính:
 - Đăng nhập và đăng ký: Cho phép người dùng tạo tài khoản và đăng nhập để sử dụng các tính năng của ứng dụng.
 - Tạo và tham gia bài trắc nghiệm: Người dùng có thể tạo các bài trắc nghiệm mới hoặc tham gia các bài trắc nghiệm có sẵn.
 - Quản lý câu hỏi và chủ đề: Hỗ trợ thêm câu hỏi và chủ đề mới, bao gồm đính kèm hình ảnh minh họa.
