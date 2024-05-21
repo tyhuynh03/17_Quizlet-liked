@@ -1,6 +1,17 @@
 # Ứng dụng tạo câu hỏi trắc nghiệm (Quizlet-liked)
-
-- Mô tả vắn tắt tên ứng dụng ở đây (Gợi ý: ứng dụng giải quyết vấn đề gì, có các đối tượng người dùng như thế nào, có các chức năng gì...)
+Mô tả ứng dụng
+# Tên ứng dụng: Quizlet
+Quizlet là một ứng dụng học tập trực tuyến giúp người dùng tạo và tham gia các bài trắc nghiệm để kiểm tra kiến thức và kỹ năng của mình. Ứng dụng giải quyết vấn đề cải thiện hiệu quả học tập và đánh giá thông qua các bài kiểm tra ngắn gọn và trực quan.
+# Đối tượng người dùng:
+- Học sinh và sinh viên: Sử dụng để ôn tập và kiểm tra kiến thức các môn học.
+- Giáo viên và giảng viên: Tạo và quản lý các bài kiểm tra cho học sinh.
+- Người tự học: Tự kiểm tra và cải thiện kỹ năng và kiến thức cá nhân.
+Các chức năng chính:
+- Đăng nhập và đăng ký: Cho phép người dùng tạo tài khoản và đăng nhập để sử dụng các tính năng của ứng dụng.
+- Tạo và tham gia bài trắc nghiệm: Người dùng có thể tạo các bài trắc nghiệm mới hoặc tham gia các bài trắc nghiệm có sẵn.
+- Quản lý câu hỏi và chủ đề: Hỗ trợ thêm câu hỏi và chủ đề mới, bao gồm đính kèm hình ảnh minh họa.
+- Nhập câu hỏi từ file CSV: Tạo bài trắc nghiệm nhanh chóng bằng cách nhập câu hỏi từ file CSV.
+- Hiển thị kết quả và phân tích: Cung cấp kết quả chi tiết và biểu đồ trực quan về câu trả lời đúng và sai.
 
 - Bạn có thể trải nghiệm ứng dụng ở đây [LINK](https://one7-quizlet-liked.onrender.com/)
 - Một số sceenshot của ứng dụng
