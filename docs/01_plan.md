@@ -5,11 +5,11 @@
 ### 1.3 Sản phẩm MVP
 Sản phẩm MVP được thiết kế để một cá nhân có thể sử dụng và trải nghiệm các chức năng quan trọng của ứng dụng, bao gồm:
 - 1.	Tạo Câu Hỏi:
-    •	Thêm câu hỏi mới: Người dùng có thể tạo các câu hỏi mới để thêm vào bộ câu hỏi.
-    •	Đính kèm hình ảnh: Cho phép người dùng đính kèm hình ảnh vào câu hỏi để minh họa.
+  - Thêm câu hỏi mới: Người dùng có thể tạo các câu hỏi mới để thêm vào bộ câu hỏi.
+  - Đính kèm hình ảnh: Cho phép người dùng đính kèm hình ảnh vào câu hỏi để minh họa.
 - 2.	Làm Bài Trắc Nghiệm:
-    •	Tham gia bài trắc nghiệm: Người dùng có thể làm các bài trắc nghiệm dựa trên bộ câu hỏi đã tạo hoặc có sẵn.
-    •	Hiển thị kết quả: Hiển thị kết quả chi tiết ngay sau khi hoàn thành bài trắc nghiệm, bao gồm biểu đồ trực quan về câu trả lời đúng và sai.
+  - Tham gia bài trắc nghiệm: Người dùng có thể làm các bài trắc nghiệm dựa trên bộ câu hỏi đã tạo hoặc có sẵn.
+  - Hiển thị kết quả: Hiển thị kết quả chi tiết ngay sau khi hoàn thành bài trắc nghiệm, bao gồm biểu đồ trực quan về câu trả lời đúng và sai.
 
 ### 1.4 Sản phẩm hoàn thiện
 Sản phẩm hoàn thiện của Quizlet sẽ bao gồm tất cả các chức năng của MVP và mở rộng thêm các tính năng nâng cao để mang lại trải nghiệm học tập toàn diện hơn:
