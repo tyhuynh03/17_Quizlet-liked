@@ -38,7 +38,7 @@
         - Thực hiện chức năng thêm hình ảnh vào câu hỏi:Huỳnh Tấn Tỷ và Hoàng Thanh Tú
         - Thực hiện chức năng tìm kiếm topic: Phạm Nhựt Minh và Nguyễn Khắc Luật
         - Thực hiện tạo bộ câu hỏi mẫu: Huỳnh Tấn Tỷ ,Phạm Nhựt Minh,Hoàng Thanh Tú,Nguyễn Khắc Luật 
-- Tuần 12/05 – 19/05: 
-      - Thực hiện
+ - Tuần 12/05 – 19/05: 
+     - Thực hiện
         - Thực hiện deploy dự án lên hosting: Huỳnh Tấn Tỷ
         - Viết docs cho project: Huỳnh Tấn Tỷ, Hoàng Thanh Tú, Nguyễn Khắc Luật, Phạm Nhựt Minh
