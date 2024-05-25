@@ -145,7 +145,9 @@ def info_page(request):
 def my_questions(request):
     # Lấy tất cả các câu hỏi của người dùng đang đăng nhập
     user_questions = Question.objects.filter(topic__user=request.user)
-    return render(request, 'my_questions.html', {'user_questions': user_questions})
+    user_topics = Topic.objects.filter(user=request.user)
+    print(user_topics)
+    return render(request, 'my_questions.html', {'user_topics': user_topics})
 
 
 
