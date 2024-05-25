@@ -30,6 +30,22 @@
         .selected {
             background-color: #f8f9fa;
         }
+
+        #back-to-home {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        #back-to-home:hover {
+            background-color: #0056b3;
+        }
     </style>
 
 </head>
@@ -82,6 +98,9 @@
         <button id="submit-button" type="submit" class="btn btn-primary" style="display: none;">Gửi bài kiểm
             tra</button>
     </form>
+    <div>
+        <a href="{% url 'my_page' %}" id="back-to-home">Back to Home</a>
+    </div>
     </div>
 </body>
 

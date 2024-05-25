@@ -72,8 +72,8 @@ def add_question(request):
             # Lưu các đáp án liên quan
             choice_formset.instance = question
             choice_formset.save()
-
-            return redirect('my_page')  # Chuyển hướng sau khi lưu thành công
+            messages.success(request, 'Question added successfully')
+            return redirect('add_question')  # Chuyển hướng sau khi lưu thành công
     else:
         # Xử lý khi method không phải POST
         user = request.user

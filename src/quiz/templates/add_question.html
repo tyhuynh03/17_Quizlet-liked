@@ -1,71 +1,3 @@
-<!-- <!DOCTYPE html>
-<html>
-
-<head>
-    <title>Add Question</title>
-    <script>
-        // JavaScript để thêm các câu hỏi và câu trả lời khi nhấn nút "Add Question"
-        document.addEventListener('DOMContentLoaded', function () {
-            const addQuestionButton = document.getElementById('add-question-btn');
-            const formContainer = document.getElementById('form-container');
-
-            let questionCount = 0;
-
-            addQuestionButton.addEventListener('click', function () {
-                questionCount++;
-
-                // Tạo form cho câu hỏi và các câu trả lời
-                const questionForm = document.createElement('div');
-                questionForm.innerHTML = `
-                    <fieldset>
-                        <legend>Question ${questionCount}:</legend>
-                        <input type="text" name="question_text_${questionCount}" placeholder="Enter question text">
-                        <select name="topic_${questionCount}">
-                            {% for topic in topics %}
-                                <option value="{{ topic.id }}">{{ topic.name }}</option>
-                            {% endfor %}
-                        </select>
-                        <input type="radio" name="correct_choice_${questionCount}" value="1">
-                        <label>Correct</label>
-                        <input type="text" name="choice_text_${questionCount}_1" placeholder="Enter choice text">
-                        <input type="radio" name="correct_choice_${questionCount}" value="2">
-                        <label>Correct</label>
-                        <input type="text" name="choice_text_${questionCount}_2" placeholder="Enter choice text">
-                        <input type="radio" name="correct_choice_${questionCount}" value="3">
-                        <label>Correct</label>
-                        <input type="text" name="choice_text_${questionCount}_3" placeholder="Enter choice text">
-                        <input type="radio" name="correct_choice_${questionCount}" value="4">
-                        <label>Correct</label>
-                        <input type="text" name="choice_text_${questionCount}_4" placeholder="Enter choice text">
-                    </fieldset>
-                `;
-
-                formContainer.appendChild(questionForm);
-            });
-        });
-    </script>
-</head>
-
-<body>
-    <h1>Add Question</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ question_form.as_p }}
-
-        <fieldset>
-            <legend>Choices:</legend>
-            {{ choice_formset.management_form }}
-            {{ choice_formset.non_form_errors }}
-            {% for choice_form in choice_formset %}
-            {{ choice_form.as_p }}
-            {% endfor %}
-        </fieldset>
-
-        <button type="submit">Submit</button>
-    </form>
-</body>
-
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -105,6 +37,22 @@
             margin-bottom: 5px;
         }
 
+        #back-to-home {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        #back-to-home:hover {
+            background-color: #4CAF50;
+        }
+
         form input[type="text"],
         form select {
             width: 100%;
@@ -128,37 +76,112 @@
         form button[type="submit"]:hover {
             background-color: #45a049;
         }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .file-input-label {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .file-input-label:hover {
+            background-color: #0056b3;
+        }
+
+        /* Message Styles */
+        .messages {
+            list-style-type: none;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .messages li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Success Message */
+        .messages .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        /* Info Message */
+        .messages .info {
+            background-color: #cce5ff;
+            color: #004085;
+            border: 1px solid #b8daff;
+        }
+
+        /* Warning Message */
+        .messages .warning {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+        }
+
+        /* Error Message */
+        .messages .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
     </style>
 </head>
 
 
 <body>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+            {% endfor %}
+    </ul>
+    {% endif %}
     <h1>Add Question</h1>
     <form method="post" enctype="multipart/form-data">
-    <form method="post">
-      {% csrf_token %}
-      <h2>Tên câu hỏi</h2>
-      {{ question_form.as_p }}
-      <!-- Đây là phần cho phép người dùng tải lên ảnh hoặc audio -->
-      <!-- Đặt input type="file" và các yêu cầu tương ứng ở đây -->
-     
-      <input type="file" name="image" accept="image/*" />
-      <input type="file" name="audio" accept="audio/*" />
-      <h2>Đáp án</h2>
-      {{ choice_formset.as_p }}
-      <label for="topic_id">Select a Topic:</label>
-      <select name="topic_id" id="topic_id">
-        <option value="">-- Choose a Topic --</option>
-        {% for topic in topics %}
-        <option value="{{ topic.id }}">{{ topic.name }}</option>
-        {% endfor %}
-      </select>
-      <br />
-      <label for="new_topic">Or Add a New Topic:</label>
-      <input type="text" name="new_topic" id="new_topic" />
-      <br />
-      <button type="submit">Submit</button>
-    </form>
-  </body>
+        <form method="post">
+            {% csrf_token %}
+            <h2>Tên câu hỏi</h2>
+            {{ question_form.as_p }}
+            <!-- Đây là phần cho phép người dùng tải lên ảnh hoặc audio -->
+            <!-- Đặt input type="file" và các yêu cầu tương ứng ở đây -->
+            <label for="image">Upload Image:</label>
+            <input type="file" name="image" accept="image/*" />
+            <label for="audio">Upload Audio:</label>
+            <input type="file" name="audio" accept="audio/*" />
+            <h2>Đáp án</h2>
+            {{ choice_formset.as_p }}
+            <label for="topic_id">Select a Topic:</label>
+            <select name="topic_id" id="topic_id">
+                <option value="">-- Choose a Topic --</option>
+                {% for topic in topics %}
+                <option value="{{ topic.id }}">{{ topic.name }}</option>
+                {% endfor %}
+            </select>
+            <br />
+            <label for="new_topic">Or Add a New Topic:</label>
+            <input type="text" name="new_topic" id="new_topic" />
+            <br />
+            <button type="submit">Submit</button>
+            <a href="{% url 'my_page' %}" id="back-to-home">Back to Home</a>
+        </form>
+
+</body>
 
 </html>
