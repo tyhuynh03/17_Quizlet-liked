@@ -6,7 +6,7 @@ Sơ đồ hoạt động
 ![Sơ đồ hoạt động](./images/Activity%20Diagram.jpg)
 ### 3.2. ER Diagram
 Sơ đồ ER
-![Sơ đồ ER](./images/ERD.png)
+![Sơ đồ ER](./docs/images/ERD.png)
 
 ### 3.3. Database Diagram
 
