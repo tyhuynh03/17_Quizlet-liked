@@ -1,7 +1,9 @@
 ## 3. THIẾT KẾ
 
 ### 3.1. Activity Diagram
-![Sơ đồ hoạt động](./Activity%20Diagram.JPG)
+Sơ đồ hoạt động
+
+![Sơ đồ hoạt động](./images/Activity Diagram.jpg)
 ### 3.2. ER Diagram
 
 ### 3.3. Database Diagram
