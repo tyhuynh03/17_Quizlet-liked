@@ -7,7 +7,7 @@ from users.models import User
 from rest_framework import status
 from django.urls import reverse
 from django.contrib import messages
-from quiz.models import Topic,Question
+from quiz.models import Topic,Question,UserTopicScore
 from django.shortcuts import redirect
 from users.forms import UserForm
 from django.http import HttpResponseRedirect
@@ -17,6 +17,7 @@ from django.contrib.auth import login,logout
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import TemplateView
 from django.contrib.auth.decorators import login_required, user_passes_test
+from django.db.models import Sum
 
 class Register(APIView):
     def post(self,request):
@@ -236,7 +237,15 @@ class DashboardView(LoginRequiredMixin, TemplateView):
         total_user = User.objects.all().count()
         total_topic = Topic.objects.all().count()
         total_questions = Question.objects.all().count()
-
+        # lấy ra tổng số câu hỏi đã được trả lời
+        total_answered_questions = UserTopicScore.objects.aggregate(total=Sum('total_questions_answered'))['total']
+        # lấy ra tổng số câu hỏi sai
+        total_incorrect_questions = UserTopicScore.objects.aggregate(total=Sum('incorrect_answers'))['total']
+        # lấy ra tổng số câu hỏi đúng
+        total_correct_questions = UserTopicScore.objects.aggregate(total=Sum('correct_answers'))['total']
+        context['total_answered_questions'] = total_answered_questions
+        context['total_correct_questions'] = total_correct_questions
+        context['total_incorrect_questions'] = total_incorrect_questions
         context['total_user'] = total_user
         context['total_topic'] = total_topic
         context['total_questions'] = total_questions

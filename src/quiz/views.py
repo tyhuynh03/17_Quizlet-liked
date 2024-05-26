@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from .forms import QuestionForm, ChoiceFormSet
 import csv
-from .models import Question, Choice
+from .models import Question, Choice, UserTopicScore
 from django.http import JsonResponse
 import io
 from .models import Question, Choice,Topic
@@ -15,6 +15,7 @@ from django.contrib import messages
 from .forms import TopicForm, Topic
 from django.contrib.auth.decorators import login_required, user_passes_test
 import json
+from django.utils import timezone
 
 def question_list(request):
     # Lấy danh sách tất cả các chủ đề và câu hỏi tương ứng
@@ -159,7 +160,9 @@ def submit_quiz(request):
         data = request.POST
         correct_answers = 0;
         total_questions = 0;
+        incorrect_answers = 0;
         topic_id = request.POST.get('topic_id')
+        topic = Topic.objects.get(id=topic_id) 
         topic_questions = Question.objects.filter(topic_id=topic_id)
         user_answers = []
         for question in topic_questions:
@@ -172,7 +175,10 @@ def submit_quiz(request):
                     correct_answers += 1
             
             user_answers.append({'question': question, 'selected_choice_id': selected_choice_id})
-            
+        # cập nhật hoặc tạo mới một bản ghi trong userTopicScore
+        incorrect_answers = total_questions - correct_answers
+        user_topic_score = UserTopicScore.objects.create(user=request.user,topic = topic,correct_answers = correct_answers,incorrect_answers = incorrect_answers,total_questions_answered = total_questions,created_at=timezone.now())
+
         return render(request, 'quiz_result.html', {'correct_answers': correct_answers, 'total_questions': total_questions, 'questions':topic_questions, 'user_answers':user_answers})
     else:
         return HttpResponseRedirect('/')

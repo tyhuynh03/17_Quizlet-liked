@@ -89,7 +89,7 @@
                 </div>
                 <div class="child">
                     <span class="text-1">Total Answers</span>
-                    <span class="text-2">169</span>
+                    <span class="text-2">{{total_answered_questions}}</span>
                 </div>
             </div>
             <div class="c-right">
@@ -112,7 +112,7 @@
         var data = {
             labels: ['Câu đúng', 'Câu sai'],
             datasets: [{
-                data: [30, 10], // Số câu đúng và câu sai
+                data: ['{{total_correct_questions}}', '{{total_incorrect_questions}}'], // Số câu đúng và câu sai
                 backgroundColor: ['#36A2EB', '#FF6384'], // Màu cho từng phần
                 hoverBackgroundColor: ['#36A2EB', '#FF6384']
             }]
