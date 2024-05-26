@@ -17,7 +17,7 @@ from django.contrib.auth import login,logout
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import TemplateView
 from django.contrib.auth.decorators import login_required, user_passes_test
-from django.db.models import Sum
+from django.db.models import Sum,Max
 
 class Register(APIView):
     def post(self,request):
@@ -255,13 +255,22 @@ class MyPageView(LoginRequiredMixin, TemplateView):
     template_name = 'mypage.html'
     
     def get_context_data(self, **kwargs):
-        
+        # 
         context = super().get_context_data(**kwargs)
         current_user = self.request.user
         topics = Topic.objects.all()
         for topic in topics:
             topic.question_count = topic.questions.count()
             topic.created_by = topic.user.username
+        for topic in topics:
+            # lấy bản ghi mới nhất của người dùng trong chủ đề này
+            latest_score = UserTopicScore.objects.filter(user = current_user,topic = topic).order_by('-created_at').first()
+            if latest_score:
+                # Tính toán phần trăm làm đúng
+                percentage_correct = (latest_score.correct_answers / latest_score.total_questions_answered) * 100
+                topic.percentage_correct = round(percentage_correct, 2)  # Làm tròn phần trăm đến 2 chữ số sau dấu thập phân
+            else:
+                topic.percentage_correct = None  # Nếu không có bản ghi nào, thiết lập phần trăm làm đúng là 0
         context['topics'] = topics
         context['current_user'] = current_user.username
         return context

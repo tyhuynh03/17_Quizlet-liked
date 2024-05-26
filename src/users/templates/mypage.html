@@ -19,7 +19,8 @@
         <div class="search-bar">
             <form method="GET" action="{% url 'search' %}">
                 <input type="text" name="q" placeholder="Tìm kiếm..." value="{{ query|default:'' }}">
-                <button type="submit" class="btn btn-outline-secondary"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button type="submit" class="btn btn-outline-secondary"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
             </form>
         </div>
         <div class="navigation">
@@ -62,6 +63,11 @@
                 {% if topic.question_count %}
                 <div class="description-box">
                     <div class="description"><span>({{ topic.question_count }} questions)</span></div>
+                    {% if topic.percentage_correct is not None %}
+                    <div class="description"><span>{{ topic.percentage_correct }}% correct</span></div>
+                    {% else %}
+                    <div class="description"><span>No data available</span></div>
+                    {% endif %}
                 </div>
                 {% endif %}
                 <div class="SetPreviewCard-creator"><span>{{ topic.created_by }}</span></div>
