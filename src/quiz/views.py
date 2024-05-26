@@ -248,12 +248,11 @@ def question_update_view(request,question_id):
             question_data = response.json()
             return render(request, 'question_update.html', {'question_data': question_data})
         else:
-            messages.error(request, 'User not found')
+            messages.error(request, 'Question not found')
             return redirect('question_manage')
     elif request.method == 'POST':
         # Lấy dữ liệu từ form gửi lên
         updated_data = request.POST
-        print(updated_data)
         text = request.POST.get('text')
         topic_id = request.POST.get('topic')
         image = request.FILES.get('image')
@@ -264,7 +263,6 @@ def question_update_view(request,question_id):
             is_correct = updated_data.get(f'is_correct{i}') == 'on'
 
             choices.append({'id': choice_id, 'text': choice_text, 'is_correct': is_correct})
-        print(choices)
         updated_data = {
             'text': text,
             'topic': topic_id,
@@ -276,7 +274,7 @@ def question_update_view(request,question_id):
         # Gửi yêu cầu Restapi để cập nhật thông tin
         response = requests.put(f'http://127.0.0.1:8000/question/{question_id}/', json=updated_data)
         if response.status_code == 200:
-            messages.success(request, 'question information updated successfully')
+            messages.success(request, 'Question information updated successfully')
             return redirect('question_manage')
         else:
             # Xử lý trường hợp cập nhật thất bại
