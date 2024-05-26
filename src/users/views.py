@@ -18,17 +18,45 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import TemplateView
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.db.models import Sum,Max
+from django.core.exceptions import ValidationError
+from django.core.validators import validate_email, MinLengthValidator, RegexValidator
+from django.contrib.auth.password_validation import validate_password
+from rest_framework.exceptions import ValidationError as DRFValidationError
 
 class Register(APIView):
-    def post(self,request):
-        serializer = UserSerializer(data=request.data)
+    def post(self, request):
+        data = request.data
+        email = data.get('email')
+        username = data.get('username')
+        password = data.get('password')
+
+        # Kiểm tra tính hợp lệ của email
+        try:
+            validate_email(email)
+        except ValidationError:
+            raise DRFValidationError({'email': 'Invalid email address'})
+
+        # Kiểm tra tính hợp lệ của username
+        if len(username) < 4:
+            raise DRFValidationError({'username': 'Username must be at least 4 characters long'})
+        username_validator = RegexValidator(regex='^[a-zA-Z0-9]+$', message='Username must contain only letters and numbers')
+        try:
+            username_validator(username)
+        except ValidationError as e:
+            raise DRFValidationError({'username': e.message})
+
+        # Kiểm tra tính hợp lệ của password
+        try:
+            validate_password(password)
+        except ValidationError as e:
+            raise DRFValidationError({'password': e.messages})
+
+        # Lưu user nếu tất cả các kiểm tra đều hợp lệ
+        serializer = UserSerializer(data=data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
         messages.success(request, 'Account created successfully')
-        # sau khi tạo tài khoản xong thì load lại trang đang ở
         return redirect(reverse('login_view'))
-
-
 
 
 class loginView(APIView):
