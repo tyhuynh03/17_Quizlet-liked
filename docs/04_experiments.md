@@ -53,7 +53,7 @@ Giao diện trang làm bài quiz
 
 ### 4.3. Kết quả
 
-# Làm được
+### Làm được
 - 1.	Chức năng đăng nhập cho người dùng:
     -  Đã triển khai hệ thống xác thực người dùng, cho phép người dùng đăng ký và đăng nhập vào hệ thống.
     -  Sử dụng Django's built-in authentication system để đảm bảo tính bảo mật và dễ dàng quản lý người dùng.
@@ -81,11 +81,11 @@ Giao diện trang làm bài quiz
     -  Đã triển khai thành công trang web quizlet lên hosting sử dụng Render.com.
   -  Sử dụng Docker để container hóa ứng dụng và đảm bảo tính nhất quán trong môi trường triển khai.
     -  Đảm bảo rằng ứng dụng hoạt động ổn định và có thể truy cập từ internet.
-# Chưa làm được
+### Chưa làm được
 - 1.	Chuyển đổi cơ sở dữ liệu từ SQLite sang PostgreSQL:
     -  Dự án hiện tại vẫn đang sử dụng SQLite làm cơ sở dữ liệu chính. Kế hoạch chuyển đổi sang PostgreSQL chưa hoàn thành.
     -  Cần thiết lập và cấu hình PostgreSQL, sau đó di chuyển dữ liệu từ SQLite sang PostgreSQL.
-# Hướng phát triển
+### Hướng phát triển
 - 1.	Hoàn thiện việc chuyển đổi cơ sở dữ liệu sang PostgreSQL:
     -  Cài đặt PostgreSQL và cấu hình trong dự án Django.
     -  Sử dụng các công cụ di chuyển dữ liệu để chuyển dữ liệu từ SQLite sang PostgreSQL.
