@@ -19,10 +19,9 @@
         <div class="search-bar">
             <form method="GET" action="{% url 'search' %}">
                 <input type="text" name="q" placeholder="Tìm kiếm..." value="{{ query|default:'' }}">
-                <button type="submit" class="btn btn-outline-secondary"><i
-                        class="fa-solid fa-magnifying-glass"></i></button>
+                <button type="submit" class="btn btn-outline-secondary"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
-        </div>
+        </div>        
         <div class="navigation">
             <a href="#" onclick="showLibrary()">Thư viện</a>
             <a href="{% url 'question_list' %}">Chủ đề</a>

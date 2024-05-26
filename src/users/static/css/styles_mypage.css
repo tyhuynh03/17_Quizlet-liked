@@ -72,64 +72,41 @@ header .navigation a:hover {
 
 .search-bar {
     position: relative;
-    margin-right: 20px;
-    /* Để tạo khoảng cách với phần tử tiếp theo */
 }
 
 .search-bar input[type="text"] {
-    width: 400px;
-    /* Độ rộng của ô tìm kiếm */
-    padding: 10px;
-    /* Khoảng cách bên trong của ô tìm kiếm */
+    width: 300px; /* Set desired width */
+    padding: 10px 15px; /* Simplify padding */
     border: 1px solid #ccc;
-    /* Viền ô tìm kiếm */
     border-radius: 20px;
-    /* Độ cong của viền */
     outline: none;
-    /* Loại bỏ đường viền khi ô tìm kiếm được chọn */
     transition: all 0.3s ease-in-out;
-    /* Hiệu ứng chuyển đổi mượt mà */
 }
 
-.search-bar {
-    position: relative;
-}
-
-.search-bar input[type="text"] {
-    padding-right: 30px;
-    /* Đảm bảo khoảng cách đủ để hiển thị icon search */
-}
-
-.search-bar i {
+.search-bar button {
     position: absolute;
     top: 50%;
-    right: 10px;
-    /* Điều chỉnh vị trí của icon search */
+    right: 10px; /* Adjust to align properly */
     transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
 }
 
-::placeholder {
-    font-weight: 600;
-    font-size: 1rem;
-    /* -webkit-letter-spacing: normal;
-    -moz-letter-spacing: normal;
-    -ms-letter-spacing: normal;
-    letter-spacing: normal; */
-    line-height: 1.5;
+.search-bar button i {
+    color: #666; /* Color of the icon */
+    font-size: 16px; /* Adjust icon size */
 }
 
 .search-bar input[type="text"]:focus {
     border-color: #007bff;
-    /* Màu viền khi ô tìm kiếm được chọn */
     box-shadow: 0 0 5px #007bff;
-    /* Hiệu ứng bóng đổ khi ô tìm kiếm được chọn */
 }
 
 .search-bar input[type="text"]::placeholder {
     color: #999;
-    /* Màu chữ gợi ý */
     font-style: italic;
-    /* Font chữ nghiêng cho chữ gợi ý */
 }
 
 .library-items {

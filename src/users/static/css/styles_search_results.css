@@ -21,54 +21,43 @@ header h2 a.logo {
 
 .search-bar {
     position: relative;
-    margin-right: 20px;
-    /* Để tạo khoảng cách với phần tử tiếp theo */
+    margin-right: 20px; /* Để tạo khoảng cách với phần tử tiếp theo */
 }
 
 .search-bar input[type="text"] {
-    width: 400px;
-    /* Độ rộng của ô tìm kiếm */
-    padding: 10px;
-    /* Khoảng cách bên trong của ô tìm kiếm */
-    border: 1px solid #ccc;
-    /* Viền ô tìm kiếm */
-    border-radius: 20px;
-    /* Độ cong của viền */
-    outline: none;
-    /* Loại bỏ đường viền khi ô tìm kiếm được chọn */
-    transition: all 0.3s ease-in-out;
-    /* Hiệu ứng chuyển đổi mượt mà */
+    width: 400px; /* Độ rộng của ô tìm kiếm */
+    padding: 10px 40px 10px 10px; /* Khoảng cách bên trong của ô tìm kiếm, với padding phải đủ để chứa icon */
+    border: 1px solid #ccc; /* Viền ô tìm kiếm */
+    border-radius: 20px; /* Độ cong của viền */
+    outline: none; /* Loại bỏ đường viền khi ô tìm kiếm được chọn */
+    transition: all 0.3s ease-in-out; /* Hiệu ứng chuyển đổi mượt mà */
 }
 
-.search-bar {
-    position: relative;
-}
-
-.search-bar input[type="text"] {
-    padding-right: 30px;
-    /* Đảm bảo khoảng cách đủ để hiển thị icon search */
-}
-
-.search-bar i {
+.search-bar button {
     position: absolute;
     top: 50%;
-    right: 10px;
-    /* Điều chỉnh vị trí của icon search */
+    right: 10px; /* Điều chỉnh vị trí của icon search */
     transform: translateY(-50%);
-}
-.navigation {
-    display: inline-block;
-    margin-left: auto;
-}
-
-.navigation a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: black;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0; /* Đảm bảo không có khoảng cách thừa */
 }
 
-.navigation .dropdown-menu {
-    min-width: 200px;
+.search-bar button i {
+    color: #666; /* Màu của biểu tượng */
+    font-size: 16px; /* Kích thước biểu tượng */
+}
+
+.search-bar input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px #007bff;
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: #999;
+    font-style: italic;
 }
 
 .container {
@@ -108,64 +97,12 @@ header h2 a.logo {
     color: #888;
 }
 
-/* Các phần còn lại của CSS */
-.create-question-box {
-    margin-top: 40px;
-    text-align: center;
+ul {
+    list-style: none;
+    padding: 0;
 }
 
-.create-question-btn {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.create-question-btn:hover {
-    background-color: #0056b3;
-}
-
-.content-6 {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 40px;
-}
-
-.content-item {
-    width: 20%;
-}
-
-.content-item h4 {
-    font-size: 18px;
+ul li {
     margin-bottom: 10px;
-}
-
-.content-item a {
-    display: block;
-    text-decoration: none;
-    color: #007bff;
-    margin-bottom: 5px;
-}
-
-.content-item a:hover {
-    text-decoration: underline;
-}
-
-.footer {
-    margin-top: 40px;
-    text-align: center;
-    padding: 20px;
-    background-color: #f8f9fa;
-}
-
-.media-icons a {
-    margin: 0 10px;
-    color: #007bff;
-}
-
-.media-icons a:hover {
-    color: #0056b3;
+    color: #333;
 }
