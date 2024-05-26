@@ -178,6 +178,12 @@ def my_questions(request):
     print(user_topics)
     return render(request, 'my_questions.html', {'user_topics': user_topics})
 
+@login_required
+def quiz_history(request):
+    # Lấy danh sách quiz đã làm từ UserTopicScore model
+    quizzes = UserTopicScore.objects.filter(user=request.user)
+    return render(request, 'quiz_history.html', {'quizzes': quizzes})
+
 
 
 class DeleteUser(APIView):

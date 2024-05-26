@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học phần</title>
+    <link rel="stylesheet" href="{% static 'css/styles_quizhistory.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Danh sách quiz đã làm</h1>
+        <ul>
+            {% for quiz in quizzes %}
+                <li>Chủ đề: {{ quiz.topic.name }} - Câu hỏi đã trả lời: {{ quiz.total_questions_answered }} - Câu trả lời đúng: {{ quiz.correct_answers }} - Câu trả lời sai: {{ quiz.incorrect_answers }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
