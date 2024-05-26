@@ -54,5 +54,50 @@ Giao diện trang làm bài quiz
 ### 4.3. Kết quả
 
 - Làm được
-- Chưa làm được
-- Hướng phát triển
+1.	Chức năng đăng nhập cho người dùng:
+  -  Đã triển khai hệ thống xác thực người dùng, cho phép người dùng đăng ký và đăng nhập vào hệ thống.
+  -  Sử dụng Django's built-in authentication system để đảm bảo tính bảo mật và dễ dàng quản lý người dùng.
+2.	Chức năng làm bài trắc nghiệm (Quiz):
+  -  Người dùng có thể truy cập và làm các bài trắc nghiệm được tạo sẵn.
+  -  Giao diện trực quan, dễ sử dụng giúp người dùng có trải nghiệm tốt khi làm bài trắc nghiệm.
+3.	Trang kết quả sau khi trả lời bài trắc nghiệm:
+  -  Hiển thị kết quả ngay sau khi người dùng hoàn thành bài trắc nghiệm.
+  -  Cung cấp thông tin chi tiết về câu trả lời đúng và sai, giúp người dùng hiểu rõ hơn về kết quả của mình.
+  -  Biểu đồ trực quan hiển thị số lượng câu trả lời đúng và sai, giúp người dùng dễ dàng nắm bắt được hiệu quả làm bài của mình.
+4.	Chức năng quản lý câu hỏi của người dùng:
+  -  Người dùng có quyền xem và xóa các câu hỏi riêng của mình.
+  -  Hệ thống quản lý câu hỏi và chủ đề giúp người dùng dễ dàng theo dõi và quản lý nội dung của mình.
+5.	Chức năng thêm câu hỏi bằng file CSV hoặc thủ công:
+  -  Người dùng có thể thêm câu hỏi mới vào hệ thống bằng cách tải lên file CSV.
+  -  Hệ thống hỗ trợ nhập liệu thủ công cho từng câu hỏi, cung cấp giao diện thân thiện để người dùng dễ dàng thêm và chỉnh sửa câu hỏi.
+6.	Chức năng thêm hình ảnh cho câu hỏi:
+  -  Người dùng có thể đính kèm hình ảnh vào câu hỏi để minh họa thêm.
+  -  Hệ thống hỗ trợ tải lên hình ảnh từ máy tính.
+7.	Trang dành riêng cho admin:
+  -  Đã xây dựng một trang quản trị dành riêng cho admin.
+  -  Admin có thể quản lý người dùng, chủ đề (topics), và các câu hỏi.
+•	Giao diện quản trị thân thiện, dễ sử dụng, có dashboard trực quan giúp admin có cái nhìn tổng quan về hệ thống.
+8.	Triển khai ứng dụng lên hosting:
+  -  Đã triển khai thành công trang web quizlet lên hosting sử dụng Render.com.
+  -  Sử dụng Docker để container hóa ứng dụng và đảm bảo tính nhất quán trong môi trường triển khai.
+  -  Đảm bảo rằng ứng dụng hoạt động ổn định và có thể truy cập từ internet.
+Chưa làm được
+1.	Chuyển đổi cơ sở dữ liệu từ SQLite sang PostgreSQL:
+  -  Dự án hiện tại vẫn đang sử dụng SQLite làm cơ sở dữ liệu chính. Kế hoạch chuyển đổi sang PostgreSQL chưa hoàn thành.
+  -  Cần thiết lập và cấu hình PostgreSQL, sau đó di chuyển dữ liệu từ SQLite sang PostgreSQL.
+Hướng phát triển
+1.	Hoàn thiện việc chuyển đổi cơ sở dữ liệu sang PostgreSQL:
+  -  Cài đặt PostgreSQL và cấu hình trong dự án Django.
+  -  Sử dụng các công cụ di chuyển dữ liệu để chuyển dữ liệu từ SQLite sang PostgreSQL.
+  -  Kiểm tra và đảm bảo rằng tất cả các chức năng hoạt động tốt với cơ sở dữ liệu mới.
+3.	Thêm chức năng nâng cao cho bài trắc nghiệm:
+  -  Tích hợp thêm các loại câu hỏi khác nhau (ví dụ: câu hỏi dạng kéo thả, câu hỏi dạng lựa chọn hình ảnh).
+  -  Cải thiện tính năng phân tích kết quả bài trắc nghiệm để cung cấp thông tin chi tiết hơn cho người dùng.
+4.	Tích hợp thêm các tính năng xã hội:
+  -  Cho phép người dùng chia sẻ kết quả bài trắc nghiệm lên mạng xã hội.
+  -  Tạo tính năng thảo luận, nơi người dùng có thể thảo luận về các câu hỏi và chủ đề.
+5.	Phát triển ứng dụng di động:
+  -  Tạo ứng dụng di động để người dùng có thể truy cập và làm bài trắc nghiệm trên thiết bị di động của mình.
+  -  Sử dụng các framework phát triển ứng dụng di động như React Native hoặc Flutter để xây dựng ứng dụng cho cả Android và iOS.
+  -  Đồng bộ hóa dữ liệu giữa ứng dụng di động và hệ thống backend hiện có.
+
