@@ -82,3 +82,5 @@ Hướng dẫn cài đặt và chạy sau khi pull project từ github về (Lư
     - Trách nhiệm 4: Giám sát và xử lý các lỗi phát sinh trong quá trình sử dụng
 
 ---
++ Video demo project: https://youtu.be/M7Yl7N7EF1E
+---
